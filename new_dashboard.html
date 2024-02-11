@@ -864,7 +864,7 @@
         var file1
         var formId
 
-        axios.post(`http://103.88.225.131:8080/form2/getForm`)
+        axios.post(`http://127.0.0.1:8080/form2/getForm`)
         // axios.post(`http://localhost:8080/form2/getForm`)
             .then(function (response) {
                 console.log(response.data.form)
@@ -891,7 +891,7 @@
 
 
         function popup(id) {
-            axios.post(`http://103.88.225.131:8080/form2/getFormById`, {
+            axios.post(`http://127.0.0.1:8080/form2/getFormById`, {
             // axios.post(`http://localhost:8080/form2/getFormById`, {
                 form2Id: id
             })
@@ -1073,7 +1073,7 @@
 
 
         function downloadFile(path, fileName) {
-            axios.get(`http://103.88.225.131:8080/downloadFile`, {
+            axios.get(`http://127.0.0.1:8080/downloadFile`, {
                 responseType: 'blob',
                 params: { fileId: path },
             })
@@ -1092,7 +1092,7 @@
         function deleteEntry(id) {
             if (window.confirm("Are you sure?")) {
                 // axios.delete('http://localhost:8080/form2/deleteEntry', {
-                    axios.delete('http://103.88.225.131:8080/form2/deleteEntry', {
+                    axios.delete('http://127.0.0.1:8080/form2/deleteEntry', {
                     data: {
                         formId: id
                     }

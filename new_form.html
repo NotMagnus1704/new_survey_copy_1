@@ -539,7 +539,7 @@
                     </label><br>
                     <textarea type="textarea" id="total_elec_motors"
                             name="total_elec_motors"></textarea><br><br>
-                    <label for="investments3">65.1. Investments
+                    <label for="investments65">65.1. Investments
                     </label>
                     <input type="text" id="investments65" name="investments65"><br> 
                     <!-- CHANGE ID -->
@@ -1431,7 +1431,7 @@
             })
 
 
-            axios.post(`http://103.88.225.131:8080/form2/postForm`, {
+            axios.post(`http://127.0.0.1:8080/form2/postForm`, {
                 // axios.post(`http://localhost:8080/form2/postForm`, {
                 form2Id: new Date().getTime(),
                 facility_pic_ent: facility_pic_ent,
@@ -1573,7 +1573,7 @@
                 investments6: investments6,
                 investments7: investments7,
                 investments8: investments8,
-                investments65:investments65,
+                investments65: investments65,
 
             })
 
@@ -1595,7 +1595,7 @@
                 formData.append("file", selectedFile);
                 console.log(selectedFile);
 
-                const response = await axios.post(`http://103.88.225.131:8080/uploadFile`, formData, {
+                const response = await axios.post(`http://127.0.0.1:8080/uploadFile`, formData, {
                     headers: {
                         "Content-Type": "multipart/form-data",
                     }

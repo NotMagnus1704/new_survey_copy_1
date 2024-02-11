@@ -465,7 +465,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.1/axios.min.js"></script>
 
     <script>
-        axios.post(`http://103.88.225.131:8080/services/getInformations`)
+        axios.post(`http://127.0.0.1:8080/services/getInformations`)
             .then(function (response) {
                 console.log(response.data.requests)
                 const htmlRequests = response.data.requests.reverse().map(item =>
@@ -490,7 +490,7 @@
 
 
         function popup(id) {
-            axios.post(`http://103.88.225.131:8080/services/getInformationById`, {
+            axios.post(`http://127.0.0.1:8080/services/getInformationById`, {
                 informationId: id
             })
                 .then(function (res) {
@@ -573,7 +573,7 @@
         }
 
         function downloadFile(path, fileName) {
-            axios.get(`http://103.88.225.131:8080/downloadFile`, {
+            axios.get(`http://127.0.0.1:8080/downloadFile`, {
                 responseType: 'blob',
                 params: { fileId: path },
             })

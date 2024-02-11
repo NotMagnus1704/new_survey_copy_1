@@ -1759,13 +1759,13 @@
                 <td id="assess_ob_at_boiler_2">{Assessment_Observation_at_the_Boiler_Area}</td>
             </tr>
 
-            <tr>
+            <!-- <tr>
                 <td>
                     <img style="height: 400px" src="" alt="pic_ob_at_thermopac" id="pic_ob_at_thermopac" />
                 </td>
                 <td id="assess_ob_at_thermopac_4">{Assessment_Observation_at_the_Thermopac}</td>
 
-            </tr>
+            </tr> -->
 
             <tr>
                 <td>
@@ -1905,9 +1905,9 @@
             return isNaN(parsedValue) ? 0 : parsedValue;
         };
 
-        const BACKEND_URL = "http://103.88.225.131:8080"
+        const BACKEND_URL = "http://127.0.0.1:8080"
 
-        axios.post(`http://103.88.225.131:8080/form2/getFormById`, {
+        axios.post(`http://127.0.0.1:8080/form2/getFormById`, {
             // axios.post(`http://localhost:8080/form2/getFormById`, {
             form2Id: formIdValue
         })
@@ -2239,11 +2239,10 @@
 
 
                     "assess_ob_at_power_house_2": response.data.form.assess_ob_at_power_house,
-                    // "assess_ob_at_compressor_2": response.data.form.assess_ob_at_power_house, // Empty content 
-                    "assess_ob_at_compressor_2": response.data.form.assess_ob_at_compressor,
+                    // "assess_ob_at_compressor_2": response.data.form.assess_ob_at_power_house, // Empty content
                     "assess_ob_at_genset_3": response.data.form.assess_ob_at_genset,
                     "assess_ob_at_boiler_2": response.data.form.assess_ob_at_boiler,
-                    "assess_ob_at_thermopac_4": response.data.form.assess_ob_at_thermopac, // Empty content
+                    // "assess_ob_at_thermopac_4": response.data.form.assess_ob_at_thermopac, // Empty content
                     "assess_ob_at_other_2": response.data.form.assess_ob_at_other,
                     // "lighting_systems_photo_2": response.data.form.lighting_observation,
                     "lighting_observation_3": response.data.form.lighting_observation, // Empty content
