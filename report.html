@@ -2045,7 +2045,7 @@
                 document.getElementById('specific_energy').innerHTML = response.data.form.specific_energy;
                 document.getElementById('energy_cost').innerHTML = response.data.form.energy_cost;
                 // document.getElementById('energy_cost1').innerHTML = response.data.form.energy_cost;
-                document.getElementById('energy_cost1').innerHTML = (parseValue(response.data.form.annual_energy_cost)/parseValue(response.data.form.annual_production_quantity)).toFixed(2);
+                document.getElementById('energy_cost1').innerHTML = (parseValue(response.data.form.annual_energy_cost) / parseValue(response.data.form.annual_production_quantity)).toFixed(2);
                 document.getElementById('specific_water_cost1').innerHTML = response.data.form.specific_water_cost1;
                 document.getElementById('specific_fuel_cost').innerHTML = response.data.form.specific_fuel_cost;
                 document.getElementById('waste_heat_recovery_fuel_savings').innerHTML = response.data.form.waste_heat_recovery_fuel_savings;
@@ -2173,16 +2173,16 @@
 
 
                 var totalSavings =
-  parseValue(response.data.form.savings1) * parseValue(response.data.form.cost_fresh_water) +
-  parseValue(response.data.form.compressed_air_saving) * parseValue(response.data.form.energy_cost) +
-  parseValue(response.data.form.lighting_est_savings) +
-  parseValue(response.data.form.waste_heat_recovery_fuel_savings) * parseValue(response.data.form.energy_cost) +
-  parseValue(response.data.form.cost_fresh_water) * parseValue(response.data.form.savings2) +
-  parseValue(response.data.form.savings3) * parseValue(response.data.form.energy_cost) +
-  parseValue(response.data.form.savings4) * parseValue(response.data.form.cost_fresh_water) +
-  parseValue(response.data.form.savings5) * parseValue(response.data.form.cost_fresh_water);
+                    parseValue(response.data.form.savings1) * parseValue(response.data.form.cost_fresh_water) +
+                    parseValue(response.data.form.compressed_air_saving) * parseValue(response.data.form.energy_cost) +
+                    parseValue(response.data.form.lighting_est_savings) +
+                    parseValue(response.data.form.waste_heat_recovery_fuel_savings) * parseValue(response.data.form.energy_cost) +
+                    parseValue(response.data.form.cost_fresh_water) * parseValue(response.data.form.savings2) +
+                    parseValue(response.data.form.savings3) * parseValue(response.data.form.energy_cost) +
+                    parseValue(response.data.form.savings4) * parseValue(response.data.form.cost_fresh_water) +
+                    parseValue(response.data.form.savings5) * parseValue(response.data.form.cost_fresh_water);
 
-        document.getElementById('savingsTotal').innerHTML = (totalSavings).toFixed(2);
+                document.getElementById('savingsTotal').innerHTML = (totalSavings).toFixed(2);
 
 
 
@@ -2269,15 +2269,21 @@
                         const value = glimpseTable[key];
                         const element = document.getElementById(key);
                         if (element) {
-                            if (value.trim() !== "") {
-                                if (element.tagName === "IMG") {
-                                    element.src = value;
+                            if (value !== undefined && value !== null) {
+                                const trimmedValue = value.trim();
+                                if (trimmedValue !== "") {
+                                    if (element.tagName === "IMG") {
+                                        element.src = trimmedValue;
+                                    } else {
+                                        element.textContent = trimmedValue;
+                                    }
                                 } else {
-                                    element.textContent = value;
+                                    // Hide the parent table cell if value is empty
+                                    element.parentNode.style.display = 'none';
                                 }
                             } else {
-                                // Hide the parent table cell if value is empty
-                                element.parentNode.style.display = 'none';
+                                // Handle the case where value is undefined or null
+                                console.error(`Value for key '${key}' is undefined or null.`);
                             }
                         }
                     }
@@ -2344,7 +2350,7 @@
         // var savingsMul8Value = parseFloat(document.getElementById('savingsMul8').value) || 0;
         // var savingsMul9Value = parseFloat(document.getElementById('savingsMul9').value) || 0;
 
-        
+
 
     </script>
 
