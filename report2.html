@@ -7,10 +7,10 @@
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <meta charset="utf-8">
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+        *{
+            font-family: "Noto Sans", sans-serif;
         }
-
         h1,
         h2,
         h3 {
@@ -20,6 +20,7 @@
         table {
             border-collapse: collapse;
             width: 100%;
+            
         }
 
         th,
@@ -27,15 +28,18 @@
             border: 1px solid #ddd;
             padding: 8px;
             text-align: left;
+        
         }
 
         th {
-            background-color: #FFA500 !important;
+            background-color: #5e7a8c !important;
+            color: white;
         }
 
         img {
             max-width: 100%;
             height: auto;
+            border-radius: 0.7rem;
         }
 
         .underline {
@@ -51,11 +55,14 @@
         .out-container {
             border: 1px solid black;
             width: 700px;
+            border-radius: 0.4rem;
+
         }
 
         .container {
             display: flex;
             width: 700px;
+            
         }
 
         .column {
@@ -138,6 +145,64 @@
 
             /* Adjust other styles for printing as needed */
         }
+
+        /* Styles to improve aesthetics */
+
+        .download-report{
+            background-color: #d2d2d2;
+            border-radius: 0.8rem;
+
+        }
+
+        .download-report-heading{
+            font-weight: 300;
+            margin-left: 30%;
+        }
+
+        .green-button{
+            background-color: rgb(0, 208, 0);
+            border: 2px solid rgb(0, 208, 0);
+            color: white;
+            border-radius: 0.5rem;
+        }
+
+        .sub-heading{
+            font-weight: 300;
+            font-size: 3rem;
+            background-color: #d2d2d2;
+            padding: 2rem;
+            border-radius: 0.4rem;
+        }
+
+        .green-button:hover{
+            background-color: rgb(0, 173, 0);
+            border: 2px solid rgb(0, 173, 0);
+        }
+
+        .custom-link{
+            color: orangered;
+        }
+        
+        .custom-link:hover{
+            color: rgb(0, 145, 2);
+        }
+
+        .text-content{
+            letter-spacing: 1px;
+            border: 1px solid black;
+            padding: 2rem;
+            border-radius: 0.4rem;
+        }
+
+        .table-label{
+            color: white;
+            background-color: #5e7a8c;
+            padding: 1rem;
+            font-weight: 300;
+            border-top-left-radius: 0.4rem;
+            border-top-right-radius: 0.4rem;
+            margin-top: 1rem;
+        }
     </style>
 
 </head>
@@ -145,32 +210,31 @@
 <body>
     <div>
         <div
-            class="p-3 m-5 border border-3 rounded d-flex align-items-center bg-light justify-content-between d-print-none">
-            <b class="fs-3">Click this button to download the report</b>
-            <div class="btn btn-primary p-3" id="downloadBtn" onclick="window.print();">Download Report</div>
+            class="download-report p-3 m-5 d-flex align-items-center  justify-content-between d-print-none">
+            <b class="fs-3 download-report-heading">Click this button to download the report</b>
+            <div class="green-button p-3" id="downloadBtn" onclick="window.print();">Download Report</div>
         </div>
         <!-- <hr> -->
-        <div class="d-flex justify-content-between px-4 py-2" style="border-bottom: 2px solid black;">
-            <div><b>Scaleup of Clean Technology Initiatives in Tiruppur Textile Cluster</b></div>
-            <div><b>Assessment Report - <span id="facility_name1"></span></b></div>
+        <div class="d-flex justify-content-between px-4 py-2" style="border-bottom: 1px solid black;">
+            <div>Scaleup of Clean Technology Initiatives in Tiruppur Textile Cluster</div>
+            <div>Assessment Report - <span id="facility_name1"></span></div>
         </div>
         <!-- <hr> -->
         <div id="reportContent" class="p-5">
             <center id="cent">
-                <h2>Diagnostic Study on Clean
+                <h2 class="sub-heading">Diagnostic Study on Clean
                     <br> Technology Implementation in Tiruppur Textile<br>Cluster
                 </h2>
-                <h4><br> @ M/s <span id="facility_name2">{facility_name}</span><br>
+                <h4 style="font-weight: 400;"><br> @ M/s <span id="facility_name2">{facility_name}</span><br>
                 </h4>
                 <!-- {Facility_Photo_at_Entrance} -->
                 <img src="" id="Facility_Photo_at_Entrance" alt="Facility_Photo_at_Entrance" style="height: 400px">
                 <br><br>
 
-                </h2>
-                <h4>
+                <h4 style="font-weight: 400;">
                     Location <span id="facility_location1">{facility_location}</span><br>
                     <span id="facility_address"></span><br><br>
-                    <span id="assessment_conducted_on2">{Assessment_Conducted_on}</span>
+                    <span style="font-weight: 400;" id="assessment_conducted_on2">{Assessment_Conducted_on}</span>
                 </h4>
             </center>
 
@@ -181,7 +245,7 @@
                 <div class="out-container">
                     <div class="container">
                         <div class="column">
-                            <h5>prepared by:</h5>
+                            <h5>Prepared by</h5>
                             <img class="image" src="./img/logo.jpeg" alt="Image 1">
 
                         </div>
@@ -189,22 +253,22 @@
                             <!-- Middle column is empty -->
                         </div>
                         <div class="column" id="m=last-col">
-                            <h5>Submitted Through:</h5>
+                            <h5>Submitted through</h5>
                             <img class="image" src="./img/wwf-logo.png" alt="Image 2">
                         </div>
                     </div><br>
                     <p style="font-size: 16px;">
-                        Raman Azhahia Manavalan (CEO - VRNC) | <a href="#">www.vrnc.in </a>| <a href="#">ram@vrnc.in
+                        Raman Azhahia Manavalan (CEO - VRNC) | <a class="custom-link" href="#">www.vrnc.in </a>| <a class="custom-link" href="#">ram@vrnc.in
                         </a> | +91-9965555774 |
                     </p>
                 </div>
             </center>
-            <div class="mt-5">
-                <b>Report Prepared by: VRNC | Raman Azhahia Manavalan – <span id="assessment_conducted_on3"></span></b>
+            <div class="mt-5" style="font-weight: 450;">
+                Report Prepared by: VRNC | Raman Azhahia Manavalan – <span id="assessment_conducted_on3"></span>
             </div>
             <br><br>
-            <div>
-                <h2>Executive Summary</h2>
+            <div class="text-content" style="margin-bottom: 1.5rem;">
+                <h2 style="font-weight: 350 ;margin-bottom: 1.5rem;">Executive Summary</h2>
                 <p style="text-align:justify;">WWF-India’s Rivers, Wetlands & Water Policy team is launching a program
                     for
                     the conservation of the
@@ -375,7 +439,7 @@
             <br>
 
             <br><br>
-            <h3 id="cent">Resource Consumption Details</h3>
+            <h3 class="table-label" id="cent">Resource Consumption Details</h3>
             <div>
 
                 <table>
@@ -727,7 +791,7 @@
                     <td>55</td>
                     <td>Electrical Motors - Total Numbers</td>
                     <td id="total_elec_motors">
-                        <id="total_elec_motors">>{Electrical_Motors\_-\_Total_Numbers}
+                        {Electrical_Motors\_-\_Total_Numbers}
                     </td>
                     <td></td>
                 </tr>
@@ -988,7 +1052,7 @@
                 <br>
 
                 <table>
-                    <h3>Consolidated Table on Resource Consumption</h2>
+                    <h3 class="table-label">Consolidated Table on Resource Consumption</h3>
 
                         <tr>
                             <th style="width: 500px;"><strong>Total Production (Kgs)</strong></th>
@@ -1000,12 +1064,12 @@
                             <td id="domestic_water_consumption_1">{Total_Quantity_of_Water_KL/Annum}</td>
                         </tr>
                         <tr>
-                            <th><strong>Fresh Water Usage KL/Annum</strong></td>
+                            <th><strong>Fresh Water Usage KL/Annum</strong></th>
                             <td id="qty_fresh_water_1">{Quantity_of_Fresh_Water_Kl/Annum}</td>
                         </tr>
 
                         <tr>
-                            <th><strong>Recovered Water KL/Annum</strong></td>
+                            <th><strong>Recovered Water KL/Annum</strong></th>
                             <td id="total_qty_water_1">{Quantity_of_Recovered_Water_KL/Annum}</td>
                         </tr>
 
@@ -1016,42 +1080,42 @@
                         </tr> -->
 
                         <tr>
-                            <th><strong>Electrical Energy Consumed (kWh/Annum)</strong></td>
+                            <th><strong>Electrical Energy Consumed (kWh/Annum)</strong></th>
                             <td id="total_elec_consumption">{Annual_Electricity_consumption_Total_kWh/Annum}</td>
                         </tr>
 
                         <tr>
-                            <th><strong>Boiler Fuel Ton/Yr</strong></td>
+                            <th><strong>Boiler Fuel Ton/Yr</strong></th>
                             <td id="boiler_fuel_quantity">{Boiler_Fuel_Used_in_Quantity_Ton/Annum}</td>
                         </tr>
 
                         <tr>
-                            <th><strong>Specific Water Consumption (Ltrs/Kg)</strong></td>
+                            <th><strong>Specific Water Consumption (Ltrs/Kg)</strong></th>
                             <td id="specific_water">{Specific_Water_Ltrs/Unit_of_Production}</td>
                         </tr>
 
                         <tr>
-                            <th><strong>Specific Energy Consumption (kWh/Kg)</strong></td>
+                            <th><strong>Specific Energy Consumption (kWh/Kg)</strong></th>
                             <td id="specific_energy">{Specific_Energy_kWh/Unit_of_Production}</td>
                         </tr>
 
                         <tr>
-                            <th><strong>Specific firewood Consumption (Kg/Kg)</strong></td>
+                            <th><strong>Specific firewood Consumption (Kg/Kg)</strong></th>
                             <td id="specific_fuel_1">{Specific_Fuel_Kg/Unit_of_Production}</td>
                         </tr>
 
                         <tr>
-                            <th><strong>Energy Cost/Kg</strong></td>
+                            <th><strong>Energy Cost/Kg</strong></th>
                             <td id="energy_cost">{Specific_Energy_Cost_Rs/Unit_of_Production}</td>
                         </tr>
 
                         <tr>
-                            <th><strong>Thermal Fuel Cost</strong></td>
+                            <th><strong>Thermal Fuel Cost</strong></th>
                             <td id="specific_fuel_cost">{Specific_Fuel_Cost_Rs/Unit_of_Production}</td>
                         </tr>
 
                         <tr>
-                            <th><strong>Specific Water Cost /Kg</strong></td>
+                            <th><strong>Specific Water Cost /Kg</strong></th>
                             <td id="specific_water_cost1">{Specific_Water_Cost_Rs/Unit_of_Production}</td>
                         </tr>
 
@@ -1060,39 +1124,39 @@
                 <table> -->
 
                         <tr>
-                            <th><strong>Identified Electricity Savings kWh/Yr</strong></td>
+                            <th><strong>Identified Electricity Savings kWh/Yr</strong></th>
                             <td id="energy_savings">{energy_savings}</td>
                         </tr>
 
                         <tr>
-                            <th><strong>Identified Fuel Savings Ton/Yr</strong></td>
+                            <th><strong>Identified Fuel Savings Ton/Yr</strong></th>
                             <td id="fuel_savings">{fuel_savings}</td>
                         </tr>
 
                         <tr>
-                            <th><strong>Identified Water Savings KL/Yr</strong></td>
+                            <th><strong>Identified Water Savings KL/Yr</strong></th>
                             <td id="water_savings">{water_savings}</td>
                         </tr>
 
                         <tr>
-                            <th><strong>Identified Material Savings</strong></td>
+                            <th><strong>Identified Material Savings</strong></th>
                             <td id="material_savings">{material_savings}</td>
                         </tr>
 
                         <tr>
-                            <th><strong>Total RWH Augmentation (KL/Annum)</strong></td>
+                            <th><strong>Total RWH Augmentation (KL/Annum)</strong></th>
                             <td id="rwh">{rwh}</td>
                         </tr>
 
                         <tr>
-                            <th><strong>Total Number of CT Opportunities Identified</strong></td>
+                            <th><strong>Total Number of CT Opportunities Identified</strong></th>
                             <td id="ct_opportunities">{ct_opportunities}</td>
                         </tr>
 
                 </table>
                 <br>
                 <div id="center-ed">
-                    <h3>Clean Tech Opportunities Identified & Savings Potential</h3>
+                    <h3 class="table-label">Clean Tech Opportunities Identified & Savings Potential</h3>
 
                         <table cellspacing="0" cellpadding="0"
                             style="border:0.75pt solid #000000; -aw-border:0.5pt single; -aw-border-insideh:0.5pt single #000000; -aw-border-insidev:0.5pt single #000000; border-collapse:collapse">
@@ -1625,7 +1689,7 @@
                         <th><strong>Savings in INR/Yr</strong></th>
                         <th><strong>Investments in Lakhs</strong></th>
                         <th><strong>Payback in Months</strong></th>
-                    </tr>
+                            </tr>
 
                     <tr>
                         <td id="scope_comp_air_1">{Scope_for_Energy_Savings_in_Compressed_Air_Systems}</td>
@@ -1714,9 +1778,8 @@
                     </tr> -->
 
                 
-                </div>
 
-                <h3>Glimpses of the Assessment</h3>
+                <h3 class="sub-heading" style="margin:0 2rem 1rem 2rem; font-size: 2.2rem;">Glimpses of the Assessment</h3>
 
                 <table id="glimpseTable">
 
@@ -1878,8 +1941,7 @@
                     </tr>
 
                 </table>
-        </div>
-    </div>
+        
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.1/axios.min.js"></script>
@@ -2293,6 +2355,6 @@
 
     </script>
 
-</body>
+    </body>
 
 </html>
