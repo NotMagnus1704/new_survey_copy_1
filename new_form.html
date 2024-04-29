@@ -9,59 +9,69 @@
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Tiro Gurmukhi:wght@200;300;400;500&display=swap"
-        rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-    <link rel="stylesheet" href="supply.css">
     <link rel="stylesheet" href="discharge.css">
     <link rel="stylesheet" href="risk&challenges.css">
     <link rel="stylesheet" href="profile.css">
+    <link rel="stylesheet" href="new_form.css" >
     <title>New_Form</title>
+
+
 
 </head>
 
 <body>
-    <div class="navBar bg-dark p-3 px-5 d-flex align-items-center justify-content-between rounded mx-2"
+    <div class="nav-bar justify-content-between"
         style="height: 70px; width: 100vw;">
         <div class="d-flex align-items-center gap-3">
-            <img height="60px" class="rounded" src="./img/logo.jpeg" />
-            <b class="fs-2 text-white"
-                style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">VRNC</b>
+            <img src="./img/logo.jpeg" />
+            <p class="fs-2 text-white" style="font-weight: 200;">VRNC</p>
         </div>
         <div class="d-flex">
-            <a class="p-0" href="index.html">
-                <div class="btn rounded-3 text-white"><b>Form</b></div>
-            </a>
-            <a href="dashboard.html">
-                <div class="btn rounded-3 text-white"><b>Dashboard</b></div>
-            </a>
-            <a href="new_form.html">
-                <div class="btn rounded-3 text-white"><b>Form 2</b></div>
-            </a>
-            <a href="new_dashboard.html">
-                <div class="btn rounded-3 text-white"><b>Dashboard 2</b></div>
-            </a>
+            <div class="anchor-container">
+                <a href="index.html">
+                    Form
+                </a>
+            </div>
+            <div class="anchor-container">
+                <a href="dashboard.html">
+                    Dashboard
+                </a>
+            </div>
+            <div class="anchor-container">
+                <a href="new_form.html">
+                    Form 2
+                </a>
+            </div>
+            <div class="anchor-container">
+                <a style="margin-right: 1rem;" href="new_dashboard.html">
+                    Dashboard 2
+                </a>
+            </div>
         </div>
     </div>
+
+
+
+    
     <div id="form">
         <div id="sect_1">
-            <h1 class="fs-1"><b>Diagnostic Study on Clean Technology
+            <p class="heading">Diagnostic Study on Clean Technology
                     Implementation in Tiruppur Textile
                     Cluster
-                </b></h1>
+            </p>
             <div class="container">
-                <fieldset>
+                <div class="form-container">
                     <div>
                         <label for="facility_pic_ent">1. Facility Photo at Entrance</label>
-                        <input type="file" id="facility_pic_ent" class="upload-btn" name="facility_pic_ent"
+                        <input type="file" id="facility_pic_ent" class="upload-button" name="facility_pic_ent"
                             accept=".pdf, .doc, .docx, .png, .jpg, .jpeg, .heic">
                     </div><br>
-                    <div>
+                    
                         <label for="facility_name">2. Facility Name</label>
                         <input type="text" id="facility_name" name="facility_name">
-                    </div><br>
+                    <br>
                     <div>
                         <label for="facility_pic">3. Facility Photo</label>
                         <input type="file" id="facility_pic" name="facility_pic" accept=".pdf, .doc, .docx, .png">
@@ -85,34 +95,34 @@
                     </div><br><br>
                     <div class="f_operation">
                         <label>6. Facility Operation:</label><br>
-                        <input type="checkbox" id="spinning" name="f_operation" value="spinning">
-                        <label for="spinning">Spinning</label><br>
+                        <input  type="checkbox" id="spinning" name="f_operation" value="spinning">
+                        <label class="options" for="spinning">Spinning</label><br>
                         <input type="checkbox" id="knitting" name="f_operation" value="Knitting">
-                        <label for="knitting">Knitting</label><br>
+                        <label class="options" for="knitting">Knitting</label><br>
                         <input type="checkbox" id="processing" name="f_operation" value="Processing">
-                        <label for="processing">Processing</label><br>
+                        <label class="options" for="processing">Processing</label><br>
                         <input type="checkbox" id="garmenting" name="f_operation" value="Garmenting">
-                        <label for="garmenting">Garmenting</label><br>
+                        <label class="options" for="garmenting">Garmenting</label><br>
                         <input type="checkbox" id="printing" name="f_operation" value="printing">
-                        <label for="printing">Printing</label><br>
+                        <label class="options" for="printing">Printing</label><br>
                     </div><br><br>
                     <div>
                         <label>7. Facility category</label><br>
                         <input onclick="facilityCategory('Micro')" type="radio" id="micro" name="Facility category"
                             value="Micro">
-                        <label for="micro">Micro</label>
+                        <label class="options" for="micro">Micro</label>
                         <br>
                         <input onclick="facilityCategory('Small')" type="radio" id="small" name="Facility category"
                             value="Small">
-                        <label for="small">Small</label>
+                        <label class="options" for="small">Small</label>
                         <br>
                         <input onclick="facilityCategory('Medium')" type="radio" id="medium" name="Facility category"
                             value="Medium">
-                        <label for="medium">Medium</label>
+                        <label class="options" for="medium">Medium</label>
                         <br>
                         <input onclick="facilityCategory('large')" type="radio" id="large" name="Facility category"
                             value="large">
-                        <label for="large">Large</label>
+                        <label class="options" for="large">Large</label>
                     </div><br><br>
                     <div>
                         <label for="product_mfd">9. Products Manufactured</label>
@@ -128,15 +138,15 @@
                         <br>
                         <input onclick="numShifts('Single Shift')" type="radio" id="single_shift" name="No of Shifts"
                             value="Single Shift">
-                        <label for="single_shift">Single Shift</label>
+                        <label class="options" for="single_shift">Single Shift</label>
                         <br>
                         <input onclick="numShifts('Two Shift')" type="radio" id="two_shift" name="No of Shifts"
                             value="Two Shift">
-                        <label for="two_shift">Two Shift</label>
+                        <label class="options" for="two_shift">Two Shift</label>
                         <br>
                         <input onclick="numShifts('Three Shift')" type="radio" id="three_shift" name="No of Shifts"
                             value="Three Shift">
-                        <label for="three_shift">Three Shift</label>
+                        <label class="options" for="three_shift">Three Shift</label>
                     </div><br><br>
                     <div>
                         <label for="hr_shift">12. Hrs/Shift</label>
@@ -163,21 +173,21 @@
 
                         <input type="checkbox" id="grid_electricity_ht" name="elec_energy_src"
                             value="Grid Electricity HT">
-                        <label for="grid_electricity_ht">Grid Electricity - HT</label><br>
+                        <label class="options" for="grid_electricity_ht">Grid Electricity - HT</label><br>
                         <input type="checkbox" id="grid_electricity_lt" name="elec_energy_src"
                             value="Grid Electricity - LT">
-                        <label for="grid_electricity_lt">Grid Electricity - LT</label><br>
+                        <label class="options" for="grid_electricity_lt">Grid Electricity - LT</label><br>
                         <input type="checkbox" id="ltct" name="elec_energy_src" value="LTCT">
-                        <label for="ltct">LTCT</label><br>
+                        <label class="options" for="ltct">LTCT</label><br>
                     </div><br><br>
                     <div>
                         <label for="baseline_data">18. Baseline Data Period (Mention the FY Period as
                             YY-YY)</label><br>
                         <input onclick="financial()" type="radio" id="financial" name="period" value="yes4">
-                        <label for="financial">Financial Year</label><br>
+                        <label class="options" for="financial">Financial Year</label><br>
 
                         <input onclick="calender()" type="radio" id="calender" name="period" value="no4">
-                        <label for="calender">Calender Year</label>
+                        <label class="options" for="calender">Calender Year</label>
                         <div class="display_data" id="display_data">
                             <input type="text" id="baseline_data_period" name="baseline_data_period">
                         </div>
@@ -188,16 +198,19 @@
                             (Total)(kWh/Annum)</label><br>
                         <input type="text" id="total_elec_consumption" name="total_elec_consumption">
                     </div><br>
-                    <button onclick="sect2()" onclick="validateProfile()" name="next1" id="next"
-                        class="btn btn-primary">Next &raquo;</button>
-                </fieldset>
+                    
+                    <div class="bottom-button-container">
+                        <button onclick="sect2()" onclick="validateProfile()" name="next1" id="next"
+                        class="next-prev-button">Next</button>
+                    </div>
+                </div>
             </div>
         </div>
 
         <div id="sect_2">
-            <h1 class="fs-1"><b># Section - 2</b></h1>
+            <h1 class="heading">Section- 2</h1>
             <div class="container">
-                <fieldset>
+                <div class="form-container">
                     <div>
                         <label for="annual_elec_consumption">20. Annual Electricity Consumption
                             (Grid)(kWh/Annum)</label>
@@ -348,21 +361,23 @@
                         <input type="text" id="garden_use" name="garden_use"><br><br>
                     </div><br>
 
-                    <button onclick="sect1()" class="btn btn-primary" id="prev">&laquo; Previous</button>
-                    <button onclick="sect3()" name="next3" id="next" class="btn btn-primary">Next &raquo;</button>
+                    <div class="bottom-button-container">
+                        <button onclick="sect1()" class="next-prev-button" id="prev">Previous</button>
+                        <button onclick="sect3()" name="next3" id="next" class="next-prev-button">Next </button>
+                    </div>
             </div>
-            </fieldset>
+            </div>
         </div>
     </div>
     <br>
     <div id="sect_3">
-        <h1 class="fs-1"><b># Section - 3</b></h1>
+        <h1 class="heading">Section- 3</h1>
         <div class="container">
-            <fieldset>
+            <div class="form-container">
                 <div>
                     <label for="garden_and_domestic_water_use_ob">43. Garden & Domestic Water Use Observations
                     </label><br>
-                    <textarea id="garden_and_domestic_water_use_ob" name="garden_and_domestic_water_use_ob">
+                    <textarea cols="150" class="textarea-input" id="garden_and_domestic_water_use_ob" name="garden_and_domestic_water_use_ob">
                     </textarea><br>
                     <label for="savings1">43.1. Savings in Units
                     </label>
@@ -396,7 +411,7 @@
                     <label for="assess_ob_at_power_house">46. Assessment Observation at the Power
                         House
                     </label>
-                    <textarea type="textarea" id="assess_ob_at_power_house" name="assess_ob_at_power_house"></textarea>
+                    <textarea cols="150"type="textarea" id="assess_ob_at_power_house" name="assess_ob_at_power_house"></textarea>
                     <label for="investments1">46.1. Investments
                     </label>
                     <input type="text" id="investments1" name="investments1"><br><br>
@@ -410,7 +425,7 @@
                     <label for="assess_ob_at_compressor">48. Assessment Observation at the
                         Compressor Room
                     </label><br>
-                    <textarea type="textarea" id="assess_ob_at_compressor"
+                    <textarea cols="150"type="textarea" id="assess_ob_at_compressor"
                         name="assess_ob_at_compressor"></textarea><br><br>
                 </div>
                 <div class="scope_comp_air">
@@ -454,7 +469,7 @@
                     <label for="assess_ob_at_genset">52. Assessment Observation at the Genset
                         Room
                     </label><br>
-                    <textarea type="textarea" id="assess_ob_at_genset" name="assess_ob_at_genset"></textarea><br><br>
+                    <textarea cols="150"type="textarea" id="assess_ob_at_genset" name="assess_ob_at_genset"></textarea><br><br>
                 </div>
                 <div>
                     <label for="pic_ob_at_boiler">53. Assessment Observation at the
@@ -465,7 +480,7 @@
                     <label for="assess_ob_at_boiler">54. Assessment Observation at the Boiler
                         Area
                     </label><br>
-                    <textarea type="textarea" id="assess_ob_at_boiler" name="assess_ob_at_boiler"></textarea><br><br>
+                    <textarea cols="150"type="textarea" id="assess_ob_at_boiler" name="assess_ob_at_boiler"></textarea><br><br>
                 </div>
                 <div>
                     <label for="pic_ob_at_thermopac">55. Assessment Observation at the
@@ -475,7 +490,7 @@
                 <div>
                     <label for="assess_ob_at_thermopac">56. Assessment Observation at the Thermopac
                     </label><br>
-                    <textarea type="textarea" id="assess_ob_at_thermopac"
+                    <textarea cols="150"type="textarea" id="assess_ob_at_thermopac"
                         name="assess_ob_at_thermopac"></textarea><br><br>
                 </div>
                 <div>
@@ -487,12 +502,12 @@
                     <label for="assess_ob_at_other">58. Assessment
                         Observation at the Other Facilities (Chiller, Cooling Tower Etc)
                     </label><br>
-                    <textarea type="textarea" id="assess_ob_at_other" name="assess_ob_at_other"></textarea><br><br>
+                    <textarea cols="150"type="textarea" id="assess_ob_at_other" name="assess_ob_at_other"></textarea><br><br>
 
                     <div>
                         <label for="lighting_observation">59. Lighting Systems - Observation
                         </label>
-                        <textarea type="textarea" id="lighting_observation"
+                        <textarea cols="150"type="textarea" id="lighting_observation"
                             name="lighting_observation"></textarea><br><br>
                     </div>
                     <div>
@@ -520,24 +535,27 @@
                     <div>
                         <label for="electrical_motors_observations">64. Electrical Motors - Observations
                         </label><br>
-                        <textarea type="textarea" id="electrical_motors_observations"
+                        <textarea cols="150"type="textarea" id="electrical_motors_observations"
                             name="electrical_motors_observations"></textarea><br><br>
                     </div>
-                    <button onclick="sect2()" class="btn  -primary" id="prev">&laquo; Previous</button>
-                    <button onclick="sect4()" name="next3" id="next" class="btn btn-primary">Next &raquo;</button>
+
+                    <div class="bottom-button-container">
+                        <button onclick="sect2()" class="next-prev-button" id="prev"> Previous</button>
+                        <button onclick="sect4()" name="next3" id="next" class="next-prev-button">Next </button>
+                    </div>
                 </div>
-            </fieldset>
+            </div>
         </div>
     </div>
     </div>
     <div id="sect_4">
-        <h1 class="fs-1"><b># Section - 4</b></h1>
+        <h1 class="heading">Section- 4</h1>
         <div class="container">
-            <fieldset>
+            <div class="form-container">
                 <div>
                     <label for="total_elec_motors">65. Observations on Ceiling Fans
                     </label><br>
-                    <textarea type="textarea" id="total_elec_motors"
+                    <textarea cols="150"type="textarea" id="total_elec_motors"
                             name="total_elec_motors"></textarea><br><br>
                     <label for="investments65">65.1. Investments
                     </label>
@@ -573,7 +591,7 @@
                 </div>
                 <div>
                     <label for="waste_heat_recovery_observations">69. Waste Heat Recovery Observations</label><br>
-                    <textarea type="textarea" id="waste_heat_recovery_observations"
+                    <textarea cols="150"type="textarea" id="waste_heat_recovery_observations"
                         name="waste_heat_recovery_observations"></textarea><br><br>
                 </div>
                 <div class="scope_waste">
@@ -592,7 +610,7 @@
                     <label for="other_whr_systems">Other WHR Systems</label><br>
                     <div id="textAreaContainer" class="hidden">
                         <!-- <label for="textArea">Text Area:</label> -->
-                        <textarea id="whr"></textarea>
+                        <textarea cols="150"id="whr"></textarea>
                     </div>
                     <label for="investments4">70.1. Investments
                     </label>
@@ -614,7 +632,7 @@
                     <label for="assessment_observation_at_raw_material_inward">73. Assessment Observation at Raw
                         Material
                         Inward</label><br>
-                    <textarea type="textarea" id="assessment_observation_at_raw_material_inward"
+                    <textarea cols="150"type="textarea" id="assessment_observation_at_raw_material_inward"
                         name="assessment_observation_at_raw_material_inward"></textarea><br><br>
                 </div>
                 <div>
@@ -626,14 +644,14 @@
                 <div>
                     <label for="assessment_observation_at_material_handling">75. Assessment Observation at Material
                         Handling</label><br>
-                    <textarea type="textarea" id="assessment_observation_at_material_handling"
+                    <textarea cols="150"type="textarea" id="assessment_observation_at_material_handling"
                         name="assessment_observation_at_material_handling"></textarea><br><br>
                 </div><br>
                 <div>
                     <label for="production_machine_utilization_data_collection_aspects">76. Production Machine
                         Utilization &
                         Data Collection Aspects</label><br>
-                    <textarea type="textarea" id="production_machine_utilization_data_collection_aspects"
+                    <textarea cols="150"type="textarea" id="production_machine_utilization_data_collection_aspects"
                         name="production_machine_utilization_data_collection_aspects"></textarea><br><br>
                 </div>
                 <div>
@@ -644,7 +662,7 @@
                 </div>
                 <div>
                     <label for="production_layout_observations">78. Production Layout Observations</label><br>
-                    <textarea type="textarea" id="production_layout_observations"
+                    <textarea cols="150"type="textarea" id="production_layout_observations"
                         name="production_layout_observations"></textarea><br><br>
                 </div><br>
                 <div>
@@ -656,31 +674,31 @@
                     <label for="installation_monitoring_systems">80. Installation
                         status of Measuring & Monitoring Systems for Energy, Water, Fuel &
                         Waste Etc</label><br>
-                    <textarea type="textarea" id="installation_monitoring_systems"
+                    <textarea cols="150"type="textarea" id="installation_monitoring_systems"
                         name="installation_monitoring_systems"></textarea><br><br>
                 </div><br>
                 <div>
                     <label for="mgmt_on_energy_resource">81. Management Committment on Energy &
                         Resource Efficiency (Availability of Policy
                         & Systems)</label><br>
-                    <textarea type="textarea" id="mgmt_on_energy_resource"
+                    <textarea cols="150"type="textarea" id="mgmt_on_energy_resource"
                         name="mgmt_on_energy_resource"></textarea><br><br>
                 </div><br>
                 <div>
                     <label for="opportunities_in_the_facility">82. Technology Upgradation
                         Opportunities in the Facility</label><br>
-                    <textarea type="textarea" id="opportunities_in_the_facility"
+                    <textarea cols="150"type="textarea" id="opportunities_in_the_facility"
                         name="opportunities_in_the_facility"></textarea><br><br>
                 </div><br>
                 <div>
                     <label for="material_conservation_opportunities">83. Material Conservation &
                         Improvement Opportunities in Packing</label><br>
-                    <textarea type="textarea" id="material_conservation_opportunities"
+                    <textarea cols="150"type="textarea" id="material_conservation_opportunities"
                         name="material_conservation_opportunities"></textarea><br>
                 </div><br>
                 <div>
                     <label for="water_reuse_opportunities">84. Water Recovery & Reuse Opportunities</label><br>
-                    <textarea type="textarea" id="water_reuse_opportunities"
+                    <textarea cols="150"type="textarea" id="water_reuse_opportunities"
                         name="water_reuse_opportunities"></textarea><br>
                     <label for="savings2">84.1. Savings
                         in Units
@@ -693,7 +711,7 @@
                 <div>
                     <label for="scope_for_renewable">85. Scope for Renewable Energy
                         Investment Opportunities</label><br>
-                    <textarea type="textarea" id="scope_for_renewable" name="scope_for_renewable"></textarea><br>
+                    <textarea cols="150"type="textarea" id="scope_for_renewable" name="scope_for_renewable"></textarea><br>
 
                     <label for="savings3">85.1. Savings in Units </label>
                     <input type="text" id="savings3" name="savings3"><br>
@@ -703,7 +721,7 @@
                 </div><br>
                 <div>
                     <label for="details_of_renewable_energy">86. Details of Renewable Energy Projects</label><br>
-                    <textarea type="textarea" id="details_of_renewable_energy"
+                    <textarea cols="150"type="textarea" id="details_of_renewable_energy"
                         name="details_of_renewable_energy"></textarea><br>
                 </div><br>
                 <div>
@@ -739,12 +757,12 @@
                 </div><br>
                 <div>
                     <label for="rw_harvesting_observation">90. Rain Water Harvesting Observation</label><br>
-                    <textarea type="textarea" id="rw_harvesting_observation"
+                    <textarea cols="150"type="textarea" id="rw_harvesting_observation"
                         name="rw_harvesting_observation"></textarea><br><br>
                 </div><br>
                 <div>
                     <label for="water_saving_opportunties">91. Process Water Saving Opportunties</label><br>
-                    <textarea type="textarea" id="water_saving_opportunties"
+                    <textarea cols="150"type="textarea" id="water_saving_opportunties"
                         name="water_saving_opportunties"></textarea><br>
                     <label for="savings5">91.1. Savings
                         in Units
@@ -754,20 +772,22 @@
                     </label>
                     <input type="text" id="investments8" name="investments8"><br><br>
                 </div><br>
-                <button onclick="sect3()" class="btn btn-primary" id="prev">&laquo; Previous</button>
-                <button onclick="sect5()" name="next4" id="next" class="btn btn-primary">Next &raquo;</button>
+                <div class="bottom-button-container">
+                    <button onclick="sect3()" class="next-prev-button" id="prev"> Previous</button>
+                    <button onclick="sect5()" name="next4" id="next" class="next-prev-button">Next </button>
+                </div>
         </div>
-        </fieldset>
+        </div>
     </div>
     </div>
     </div>
     <div id="sect_5">
-        <h1 class="fs-1"><b># Section - 5</b></h1>
+        <h1 class=" heading">Section- 5</h1>
         <div class="container">
-            <fieldset>
+            <div class="form-container">
                 <div>
                     <label for="obs_on_safety">92. General Observations on Safety:</label><br>
-                    <textarea type="textarea" id="obs_on_safety" name="obs_on_safety"></textarea><br><br>
+                    <textarea cols="150"type="textarea" id="obs_on_safety" name="obs_on_safety"></textarea><br><br>
                 </div>
                 <div>
                     <label for="obs_on_safety_img">93. General Observations on Safety (Critical) Photo:</label><br>
@@ -775,7 +795,7 @@
                 </div>
                 <div>
                     <label for="obs_on_safety_crit">94. General Observations on Safety (Critical):</label><br>
-                    <textarea type="textarea" id="obs_on_safety_crit" name="obs_on_safety_crit"></textarea><br><br>
+                    <textarea cols="150"type="textarea" id="obs_on_safety_crit" name="obs_on_safety_crit"></textarea><br><br>
                 </div>
                 <div>
                     <label for="obs_on_safety_prod_photo">95. General Observations on Safety (Production) Photo:</label>
@@ -783,7 +803,7 @@
                 </div><br><br>
                 <div>
                     <label for="obs_on_safety_prod">96. General Observations on Safety (Production):</label><br>
-                    <textarea type="textarea" id="obs_on_safety_prod" name="obs_on_safety_prod"></textarea>
+                    <textarea cols="150"type="textarea" id="obs_on_safety_prod" name="obs_on_safety_prod"></textarea>
                     <br><br>
                 </div>
                 <div>
@@ -794,7 +814,7 @@
                 </div>
                 <div>
                     <label for="obs_on_safety_elec">98. General Observations on Safety (Electrical):</label><br>
-                    <textarea type="textarea" id="obs_on_safety_elec" name="obs_on_safety_elec"></textarea>
+                    <textarea cols="150"type="textarea" id="obs_on_safety_elec" name="obs_on_safety_elec"></textarea>
                     <br><br>
                 </div>
                 <div>
@@ -805,7 +825,7 @@
                 </div>
                 <div>
                     <label for="obs_on_safety_chem">100. General Observations on Safety (Chemical Handling):</label><br>
-                    <textarea type="textarea" id="obs_on_safety_chem" name="obs_on_safety_chem"></textarea>
+                    <textarea cols="150"type="textarea" id="obs_on_safety_chem" name="obs_on_safety_chem"></textarea>
                     <br><br>
                 </div>
                 <div>
@@ -816,13 +836,13 @@
                 </div>
                 <div>
                     <label for="obs_on_safety_fire">102. General Observations on Safety (Fire Hazards):</label><br>
-                    <textarea type="textarea" id="obs_on_safety_fire" name="obs_on_safety_fire"></textarea>
+                    <textarea cols="150"type="textarea" id="obs_on_safety_fire" name="obs_on_safety_fire"></textarea>
                     <br><br>
                 </div>
                 <div>
                     <label for="obs_on_elec_earth">103. General Observations on Electrical and Earthing
                         Systems:</label><br>
-                    <textarea type="textarea" id="obs_on_elec_earth" name="obs_on_elec_earth"></textarea>
+                    <textarea cols="150"type="textarea" id="obs_on_elec_earth" name="obs_on_elec_earth"></textarea>
                     <br><br>
                 </div>
                 <div>
@@ -887,14 +907,17 @@
                     <input type="text" id="ct_opportunities" name="ct_opportunities"><br><br>
                 </div>
 
-                <button onclick="sect4()" class="btn btn-primary" id="prev">&laquo; Previous</button>
-                <button type="button" class="btn btn-primary splbutton"
+                <button onclick="sect4()" class="btn btn-primary" id="prev"> Previous</button>
+                
+                <div class="bottom-button-container">
+                    <button type="button" class="next-prev-button splbutton"
                     onclick="this.classList.toggle('splbutton--loading'); submitForm()" id="next">
                     <span class="splbutton__text">Submit</span>
                 </button>
+            </div>
         </div>
     </div>
-    </fieldset>
+    </div>
     </div>
     </div>
     </div>
