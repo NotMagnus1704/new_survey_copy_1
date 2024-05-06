@@ -1,0 +1,32 @@
+commands needed for setting up express and mongodb
+npm install express
+npm install mongodb
+npm install mongoose
+npm install cors
+
+
+Data element classification:
+
+Pics
+
+1 - facility_pic_ent
+3 - facility_pic
+45 - pic_ob_at_power_house
+47 - pic_ob_at_compressor
+51 - pic_ob_at_genset
+53 - pic_ob_at_boiler
+55 - pic_ob_at_thermopac
+57 - pic_ob_at_other
+63 - lighting_systems_photo
+72 - pic_ob_raw_material
+74 - pic_ob_material_handling
+77 - pic_production_machine_util
+79 - production_layout_ob_photo 
+87 - pic_renewable_energy
+93 - obs_on_safety_img
+95 - obs_on_safety_prod_photo
+97 - obs_on_safety_elec_photo 
+99 - obs_on_safety_chem_photo
+101 - obs_on_safety_fire_photo
+104 - obs_on_elec_earth_photo
+105 - overall_obs_on_safety_photo
