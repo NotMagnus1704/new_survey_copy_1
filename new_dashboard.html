@@ -16,7 +16,7 @@
         integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
         crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="supply.css">
+    <link rel="stylesheet" href="new_dashboard.css">
 
     <style>
         body {
@@ -39,27 +39,34 @@
     <title>Dashboard 2</title>
 </head>
 
-<body style="background-color: #243b55; padding-top: 10px; width: 100vw;">
-    <div class="navBar bg-dark p-3 px-5 d-flex align-items-center justify-content-between rounded mx-2"
-        style="height: 70px; width: calc(100vw - 33px);">
+<body >
+    <div class="nav-bar justify-content-between"
+        style="height: 70px; width: 100vw;">
         <div class="d-flex align-items-center gap-3">
-            <img height="60px" class="rounded" src="./img/logo.jpeg" />
-            <b class="fs-2 text-white"
-                style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">VRNC</b>
+            <img src="./img/logo.jpeg" />
+            <p class="fs-2 text-white mb-0" style="font-weight: 200;">VRNC</p>
         </div>
         <div class="d-flex">
-            <a class="p-0" href="index.html">
-                <div class="btn rounded-3 text-white"><b>Form</b></div>
-            </a>
-            <a href="dashboard.html">
-                <div class="btn rounded-3 text-white"><b>Dashboard</b></div>
-            </a>
-            <a href="new_form.html">
-                <div class="btn rounded-3 text-white"><b>Form 2</b></div>
-            </a>
-            <a href="new_dashboard.html">
-                <div class="btn rounded-3 text-white"><b>Dashboard 2</b></div>
-            </a>
+            <div class="anchor-container">
+                <a href="index.html">
+                    Form
+                </a>
+            </div>
+            <div class="anchor-container">
+                <a href="dashboard.html">
+                    Dashboard
+                </a>
+            </div>
+            <div class="anchor-container">
+                <a href="new_form.html">
+                    Form 2
+                </a>
+            </div>
+            <div class="anchor-container">
+                <a style="margin-right: 1rem;" href="new_dashboard.html">
+                    Dashboard 2
+                </a>
+            </div>
         </div>
     </div>
     <div class="p-5 py-3">
@@ -68,15 +75,15 @@
             <h2 class="text-white p-3 py-3"><b>Dashboard</b></h2>
         </div> -->
         <div class="my-3">
-            <h1 class="fs-1"><b>Dashboard 2</b></h1>
+            <h1 class="heading" style="color:antiquewhite;">Dashboard 2</h1>
         </div>
         <div id="informations" class="my-4">
             <!-- items comes here -->
-            <div class="spinner-border" role="status">
+            <div class="spinner-border text-white" role="status">
                 <span class="sr-only">Loading...</span>
             </div>
         </div>
-        <div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-lg">
                 <div class="modal-content" id="dashboardBody">
                     <div class="modal-header">

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="submitForm();" style="height: 6rem;width: 6rem;
+    text-align: center;padding: 1.5rem; margin-left: 50%;">Submit Mock Data</button>
+    <script id="mock-data-script">
+      const mockData = {
+        userId: "123456",
+        answers: {
+          1: "Answer to question 1",
+          2: "Answer to question 2",
+          3: "Answer to question 3",
+          4: "https://example.com/image.jpg",
+          5: 123123,
+          6: 1827.123,
+          7: 782.01293,
+          8: "Answer to question 10",
+        },
+      };
+
+      const submitForm = () => {
+        // Send mockData to server via POST request
+        fetch("http://localhost:3000/submitMockData", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(mockData),
+        })
+          .then((response) => {
+            if (response.ok) {
+              console.log("Mock data submitted successfully");
+            } else {
+              console.error("Failed to submit mock data");
+            }
+          })
+          .catch((error) => {
+            console.error("Error sending POST request:", error);
+          });
+      };
+    </script>
+  </body>
+</html>
