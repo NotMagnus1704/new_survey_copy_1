@@ -7,12 +7,13 @@
 
 
 
+
 ::-webkit-scrollbar {
     width: 7px; /* Set the width of the scrollbar */
 }
 
 ::-webkit-scrollbar-track {
-    background: transparent; /* Track color */
+    background: rgba(5, 25, 126, 0.788); /* Track color */
 }
 
 ::-webkit-scrollbar-thumb {
@@ -24,7 +25,6 @@
 ::-webkit-scrollbar-thumb:hover {
     background: rgb(59, 118, 158);
 }
-
 
 body,html{
     margin: 0 !important;
@@ -71,6 +71,7 @@ body,html{
 .nav-bar a:hover{
     color: rgb(0, 255, 170);
     transition:all 0.2s ease;
+    text-decoration: none;
     
 }
 

@@ -1,0 +1,81 @@
+install nodejs, mongodb (including MongodbCompass for GUI)
+----------------------------------------------------------------------------------
+commands needed for setting up express and mongodb
+npm install express
+npm install mongodb
+npm install mongoose
+npm install cors
+npm install dotenv
+npm install nodemailer
+------------------------------------------------------------------------------------
+IMPORTANT INFO
+-------------------------------
+
+=> nodemailer library consistently works with outlook email ids (not any other email service provider), make sure to change the email and password (which is set to NULL) in the ".env" file...
+
+=> if one wants to change the subject/body of the email sent to the user, it can be done by editing lines 20 and 21 of the send_mail.js file 
+
+------------------------------------------------------------------------------------
+RUNNING THE APPLICATION
+-------------------------------
+to run the application, run "start.bat"
+
+wait for the form to open up
+
+now its ready to work!!
+------------------------------------------------------------------------------------
+files used in the 2nd iteration of the system:
+
+1) new_form.html
+2) latest_dashboard.html
+3) new_form.css
+4) new_dashboard.css
+5) main_server.js
+6) send_mail.js
+7) start.bat (for running the server and the frontend autonomously)
+8) .env (to be created)
+
+------------------------------------------------------------------------------------
+files that need to be linked:
+
+1) report2.html
+2) get_report.html
+3) fetch_data.js
+
+------------------------------------------------------------------------------------
+the following are the variables that need to be set in the ".env" file (replace NULL with actual values):
+
+EMAIL_ADDRESS = NULL
+EMAIL_PASSWORD = NULL
+PORT = NULL
+MONGODB_URI = NULL 
+
+--------------------------------------------------------------------------------
+!!!! Disclaimer !!!!
+--------------------------------------------------------------------------------
+the following are the question numbers to which images are the input
+
+---------------------------------------
+Pics
+---------------------------------------
+1 - facility_pic_ent
+3 - facility_pic
+45 - pic_ob_at_power_house
+47 - pic_ob_at_compressor
+51 - pic_ob_at_genset
+53 - pic_ob_at_boiler
+55 - pic_ob_at_thermopac
+57 - pic_ob_at_other
+63 - lighting_systems_photo
+72 - pic_ob_raw_material
+74 - pic_ob_material_handling
+77 - pic_production_machine_util
+79 - production_layout_ob_photo 
+87 - pic_renewable_energy
+93 - obs_on_safety_img
+95 - obs_on_safety_prod_photo
+97 - obs_on_safety_elec_photo 
+99 - obs_on_safety_chem_photo
+101 - obs_on_safety_fire_photo
+104 - obs_on_elec_earth_photo
+105 - overall_obs_on_safety_photo

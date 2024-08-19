@@ -38,18 +38,18 @@
         <p class="fs-2 text-white" style="font-weight: 200">VRNC</p>
       </div>
       <div class="d-flex">
-        <div class="anchor-container">
+        <!-- <div class="anchor-container">
           <a href="index.html"> Form </a>
         </div>
         <div class="anchor-container">
           <a href="dashboard.html"> Dashboard </a>
+        </div> -->
+        <div class="anchor-container">
+          <a href="new_form.html"> Form</a>
         </div>
         <div class="anchor-container">
-          <a href="new_form.html"> Form 2 </a>
-        </div>
-        <div class="anchor-container">
-          <a style="margin-right: 1rem" href="new_dashboard.html">
-            Dashboard 2
+          <a style="margin-right: 1rem" href="latest_dashboard.html">
+            Admin Dashboard
           </a>
         </div>
       </div>
@@ -63,6 +63,13 @@
         </p>
         <div class="container">
           <div class="form-container">
+            <div>
+              <label for="client_email_id">
+                !! Enter Your Primary Email ID !!
+              </label>
+              <input type="email" id="client_email_id" required name="client_email_id">
+            </div>
+            <br>
             <div>
               <label for="facility_pic_ent"
                 >1. Facility Photo at Entrance</label
@@ -163,7 +170,6 @@
             <div>
               <label>7. Facility category</label><br />
               <input
-                onclick="facilityCategory('Micro')"
                 type="radio"
                 id="micro"
                 name="Facility category"
@@ -172,7 +178,6 @@
               <label class="options" for="micro">Micro</label>
               <br />
               <input
-                onclick="facilityCategory('Small')"
                 type="radio"
                 id="small"
                 name="Facility category"
@@ -181,7 +186,6 @@
               <label class="options" for="small">Small</label>
               <br />
               <input
-                onclick="facilityCategory('Medium')"
                 type="radio"
                 id="medium"
                 name="Facility category"
@@ -190,7 +194,6 @@
               <label class="options" for="medium">Medium</label>
               <br />
               <input
-                onclick="facilityCategory('large')"
                 type="radio"
                 id="large"
                 name="Facility category"
@@ -215,8 +218,8 @@
             <div>
               <label>11. No of Shifts</label>
               <br />
+              <!-- onclick="numShifts('single_shift');" -->
               <input
-                onclick="numShifts('Single Shift')"
                 type="radio"
                 id="single_shift"
                 name="No of Shifts"
@@ -224,8 +227,8 @@
               />
               <label class="options" for="single_shift">Single Shift</label>
               <br />
+              <!-- onclick="numShifts('two_shift');" -->
               <input
-                onclick="numShifts('Two Shift')"
                 type="radio"
                 id="two_shift"
                 name="No of Shifts"
@@ -233,8 +236,8 @@
               />
               <label class="options" for="two_shift">Two Shift</label>
               <br />
+              <!-- onclick="numShifts('three_shift');" -->
               <input
-                onclick="numShifts('Three Shift')"
                 type="radio"
                 id="three_shift"
                 name="No of Shifts"
@@ -611,22 +614,24 @@
             <br />
             <div>
               <label for="ZLD" id="zld">39. ZLD Applicable</label><br />
+              <!-- isZLD(); -->
               <input
-                onclick="isZLD('Yes'); zldpres();"
+                onclick=" zldpres();"
                 type="radio"
-                id="Yes"
+                id="ZLD_Yes"
                 name="ZLD"
                 value="Yes"
               />
-              <label for="Yes">Yes</label><br />
+              <label for="ZLD_Yes">Yes</label><br />
+              <!-- isZLD(); -->
               <input
-                onclick="isZLD('No'); zldabsent();"
+                onclick=" zldabsent();"
                 type="radio"
-                id="No"
+                id="ZLD_No"
                 name="ZLD"
                 value="No"
               />
-              <label for="No">No</label><br />
+              <label for="ZLD_No">No</label><br />
             </div>
             <br />
             <div class="zldpresent" id="zldpresent">
@@ -634,28 +639,28 @@
                 <label for="effluent_treatment" id="effluent"
                   >39.1. Effluent Treatment Plant Category</label
                 ><br />
+                <!-- onclick="effTreatment()" -->
                 <input
-                  onclick="effTreatment('CETP')"
                   type="radio"
                   id="cetp"
                   name="effluent_treatment"
-                  value="cetp"
+                  value="CETP"
                 />
                 <label for="cetp">CETP</label><br />
+                <!-- onclick="effTreatment()" -->
                 <input
-                  onclick="effTreatment('IETP')"
                   type="radio"
                   id="ietp"
                   name="effluent_treatment"
-                  value="ietp"
+                  value="IETP"
                 />
                 <label for="ietp">IETP</label><br />
+                <!-- onclick="effTreatment()" -->
                 <input
-                  onclick="effTreatment('No ZLD Plant')"
                   type="radio"
                   id="no_zld"
                   name="effluent_treatment"
-                  value="no-zld"
+                  value="No ZLD Plant"
                 />
                 <label for="no_zld">No ZLD Plant</label><br />
               </div>
@@ -663,29 +668,29 @@
               <div>
                 <label for="water_quality" id="water_quality"
                   >39.2. Implementation of Water Quality Watch Center</label
-                ><br />
+                  ><br />
+                  <!-- onclick="waterQuality()" -->
                 <input
-                  onclick="waterQuality('Yes')"
                   type="radio"
                   id="yes1"
                   name="effluent_treatment2"
-                  value="yes1"
+                  value="Yes"
                 />
                 <label for="yes1">Yes</label><br />
+                <!-- onclick="waterQuality()" -->
                 <input
-                  onclick="waterQuality('No')"
                   type="radio"
                   id="no1"
                   name="effluent_treatment2"
-                  value="no1"
+                  value="No"
                 />
                 <label for="no1">No</label><br />
+                <!-- onclick="waterQuality()" -->
                 <input
-                  onclick="waterQuality('Not Applicable')"
                   type="radio"
                   id="na1"
                   name="effluent_treatment2"
-                  value="na1"
+                  value="Not Applicable"
                 />
                 <label for="na1">Not Applicable</label><br />
               </div>
@@ -1811,8 +1816,9 @@
             <button
               type="button"
               class="next-prev-button splbutton"
-              onclick="this.classList.toggle('splbutton--loading'); submitForm2();"
+              onclick="submitForm2();"
               id="next"
+              name="submitButton2"
             >
               <span class="splbutton__text">Submit</span>
             </button>
@@ -2701,524 +2707,529 @@
     -->
     <script id="post-form-data">
 
-      function submitForm2() {
-      let facility_category = null;
-      let number_of_shifts = null;
-      let zld = null;
-      let effluent_treatment = null;
-      let water_quality = null;
+    function submitForm2() {
+      
+      /*---------------------------------------------------*/
+      let zld = document.querySelector('input[name="ZLD"]:checked');
+      let zldValue = zld ? zld.value : null;
+      
+      let effluentTreatment = document.querySelector('input[name="effluent_treatment"]:checked');
+      let effluentTreatmentValue = effluentTreatment ? effluentTreatment.value : null;
+      
+      let water_quality= document.querySelector('input[name="effluent_treatment2"]:checked');
+      let water_qualityValue = water_quality ? water_quality.value : null;
+      
+      let facilityCategory = document.querySelector('input[name="Facility category"]:checked');
+      let facilityCategoryValue = facilityCategory ? facilityCategory.value : null;
 
-      function facilityCategory(val) {
-      facility_category = val;
-      }
-      function numShifts(val) {
-      number_of_shifts = val;
-      }
-      function isZLD(val) {
-      zld = val;
-      }
-      function effTreatment(val) {
-      effluent_treatment = val;
-      }
-      function waterQuality(val) {
-      water_quality = val;
-      }
+      let noOfShifts = document.querySelector('input[name="No of Shifts"]:checked');
+      let noOfShiftsValue = noOfShifts ? noOfShifts.value : null;
 
-      // Retrieving data from the form after submit event occurs
+      // const submitButton2 = document.querySelector('button[name="submitButton2"]');
+      // submitButton2.addEventListener('click', async () => {
+      //   // Get the selected radio button value
+        
+      // });
+      /*---------------------------------------------------*/
 
-      // const pic1 = document.getElementById("facility_pic_ent").files[0];
-      let facility_name = document.getElementById("facility_name").value;
-      // const pic2 = document.getElementById("facility_pic").files[0];
-      const dateInput = document.getElementById("dateInput").value;
-      const facility_location =
-      "http://www.google.com/maps/place/" +
-      document.getElementById("facility_location1").value +
-      "," +
-      document.getElementById("facility_location2").value;
-      const facility_address =
-      document.getElementById("facility_address").value;
-      const product_mfd = document.getElementById("product_mfd").value;
-      const prod_capacity = document.getElementById("prod_capacity").value;
-      const hr_shift = document.getElementById("hr_shift").value;
-      const wrk_frc = document.getElementById("wrk_frc").value;
-      const cert_obtained = document.getElementById("cert_obtained").value;
-      const cert_planned = document.getElementById("cert_planned").value;
-      const award_recieved = document.getElementById("award_recieved").value;
-      const baseline_data_period = document.getElementById(
-      "baseline_data_period"
-      ).value;
-      const total_elec_consumption = document.getElementById(
-      "total_elec_consumption"
-      ).value;
-      // Section - 2
-      const annual_elec_consumption = document.getElementById(
-      "annual_elec_consumption"
-      ).value;
-      const wind_elec_generation = document.getElementById(
-      "wind_elec_generation"
-      ).value;
-      const solar_elec_generation = document.getElementById(
-      "solar_elec_generation"
-      ).value;
-      const annual_energy_cost =
-      document.getElementById("annual_energy_cost").value;
-      const energy_cost = document.getElementById("energy_cost").value;
-      const genset_diesel_consumption = document.getElementById(
-      "genset_diesel_consumption"
-      ).value;
-      const boiler_diesel_consumption = document.getElementById(
-      "boiler_diesel_consumption"
-      ).value;
-      const annual_diesel_cost =
-      document.getElementById("annual_diesel_cost").value;
-      const petrol_consumption_logistics = document.getElementById(
-      "petrol_consumption_logistics"
-      ).value;
-      const petrol_cost_logistics = document.getElementById(
-      "petrol_cost_logistics"
-      ).value;
-      const boiler_fuel_quantity = document.getElementById(
-      "boiler_fuel_quantity"
-      ).value;
-      const boiler_fuel_cost =
-      document.getElementById("boiler_fuel_cost").value;
-      const annual_production_quantity = document.getElementById(
-      "annual_production_quantity"
-      ).value;
-      const qty_fresh_water = document.getElementById("qty_fresh_water").value;
-      const total_qty_water = document.getElementById("total_qty_water").value;
-      const cost_fresh_water =
-      document.getElementById("cost_fresh_water").value;
-      const cost_recovered_water = document.getElementById("cost_recovered_water").value;
-      const domestic_water_consumption = document.getElementById("domestic_water_consumption").value;
-      const garden_area = document.getElementById("garden_area").value;
-      const garden_use = document.getElementById("garden_use").value;
-      //Section - 3
-      const garden_and_domestic_water_use_ob = document.getElementById("garden_and_domestic_water_use_ob").value;
-      // const pic3 = document.getElementById("pic_ob_at_power_house").files[0];
-      const assess_ob_at_power_house = document.getElementById("assess_ob_at_power_house").value;
-      // const pic4 = document.getElementById("pic_ob_at_compressor").files[0];
-      const assess_ob_at_compressor = document.getElementById("assess_ob_at_compressor").value;
-      // const pic5 = document.getElementById("pic_ob_at_genset").files[0];
-      const assess_ob_at_genset = document.getElementById("assess_ob_at_genset").value;
-      // const pic6 = document.getElementById("pic_ob_at_boiler").files[0];
-      const assess_ob_at_boiler = document.getElementById("assess_ob_at_boiler").value;
-      // const pic7 = document.getElementById("pic_ob_at_thermopac").files[0];
-      const assess_ob_at_thermopac = document.getElementById("assess_ob_at_thermopac").value;
-      // const pic8 = document.getElementById("pic_ob_at_other").files[0];
-      const assess_ob_at_other = document.getElementById("assess_ob_at_other").value;
-      const compressed_air_saving = document.getElementById("compressed_air_saving").value;
-      const lighting_observation = document.getElementById("lighting_observation").value;
-      const lighting_saving = document.getElementById("lighting_saving").value;
-      const lighting_est_investment = document.getElementById("lighting_est_investment").value;
-      const lighting_est_savings = document.getElementById("lighting_est_savings").value;
-      // const pic9 = document.getElementById("lighting_systems_photo").files[0];
-      const electrical_motors_observations = document.getElementById("electrical_motors_observations").value;
-      // Section - 4
-      const total_elec_motors = document.getElementById("total_elec_motors").value;
-      const energy_saving_opportunities_in_electrical_motors =
-      document.getElementById("energy_saving_opportunities_in_electrical_motors").value;
-      const estimated_savings_motor_upgradation = document.getElementById("estimated_savings_motor_upgradation").value;
-      const waste_heat_recovery_observations = document.getElementById("waste_heat_recovery_observations").value;
-      const waste_heat_recovery_fuel_savings = document.getElementById("waste_heat_recovery_fuel_savings").value;
-      // const pic10 = document.getElementById("pic_ob_raw_material").files[0];
-      const assessment_observation_at_raw_material_inward =
-      document.getElementById("assessment_observation_at_raw_material_inward").value;
-      // const pic11 = document.getElementById("pic_ob_material_handling").files[0];
-      const assessment_observation_at_material_handling =
-      document.getElementById("assessment_observation_at_material_handling").value;
-      const production_machine_utilization_data_collection_aspects =
-      document.getElementById("production_machine_utilization_data_collection_aspects").value;
-      // const pic12 = document.getElementById("pic_production_machine_util").files[0];
-      const production_layout_observations = document.getElementById("production_layout_observations").value;
-      // const pic13 = document.getElementById("production_layout_ob_photo").files[0];
-      const installation_monitoring_systems = document.getElementById("installation_monitoring_systems").value;
-      const mgmt_on_energy_resource = document.getElementById("mgmt_on_energy_resource").value;
-      const opportunities_in_the_facility = document.getElementById("opportunities_in_the_facility").value;
-      const material_conservation_opportunities = document.getElementById("material_conservation_opportunities").value;
-      const water_reuse_opportunities = document.getElementById("water_reuse_opportunities").value;
-      const scope_for_renewable = document.getElementById("scope_for_renewable").value;
-      const details_of_renewable_energy = document.getElementById("details_of_renewable_energy").value;
-      // const pic14 = document.getElementById("pic_renewable_energy").files[0];
-      const annual_rainfall = document.getElementById("annual_rainfall").value;
-      const total_roof_area = document.getElementById("total_roof_area").value;
-      const rw_harvesting_observation = document.getElementById("rw_harvesting_observation").value;
-      const water_saving_opportunties = document.getElementById("water_saving_opportunties").value;
-      // Section - 5
-      const obs_on_safety = document.getElementById("obs_on_safety").value;
-      // const pic15 = document.getElementById("obs_on_safety_img").files[0];
-      const obs_on_safety_crit = document.getElementById("obs_on_safety_crit").value;
-      // const pic16 = document.getElementById("obs_on_safety_prod_photo").files[0];
-      const obs_on_safety_prod = document.getElementById("obs_on_safety_prod").value;
-      // const pic17 = document.getElementById("obs_on_safety_elec_photo").files[0];
-      const obs_on_safety_elec = document.getElementById("obs_on_safety_elec").value;
-      // const pic18 = document.getElementById("obs_on_safety_chem_photo").files[0];
-      const obs_on_safety_chem = document.getElementById("obs_on_safety_chem").value;
-      // const pic19 = document.getElementById("obs_on_safety_fire_photo").files[0];
-      const obs_on_safety_fire = document.getElementById("obs_on_safety_fire").value;
-      const obs_on_elec_earth = document.getElementById("obs_on_elec_earth").value;
-      // const pic20 = document.getElementById("obs_on_elec_earth_photo").files[0];
-      // const pic21 = document.getElementById("overall_obs_on_safety_photo").files[0];
-      const specific_energy = document.getElementById("specific_energy").value;
-      const specific_water = document.getElementById("specific_water").value;
-      const specific_fuel = document.getElementById("specific_fuel").value;
-      const specific_fuel_cost =
-      document.getElementById("specific_fuel_cost").value;
-      // const specific_water_cost = document.getElementById("specific_water_cost").value;
-      const specific_water_cost1 = document.getElementById("specific_water_cost1").value;
-      const energy_savings = document.getElementById("energy_savings").value;
-      const fuel_savings = document.getElementById("fuel_savings").value;
-      const water_savings = document.getElementById("water_savings").value;
-      const rwh = document.getElementById("rwh").value;
-      const material_savings = document.getElementById("material_savings").value;
-      const ct_opportunities = document.getElementById("ct_opportunities").value;
-      const savings1 = document.getElementById("savings1").value;
-      const savings2 = document.getElementById("savings2").value;
-      const savings3 = document.getElementById("savings3").value;
-      const savings4 = document.getElementById("savings4").value;
-      const savings5 = document.getElementById("savings5").value;
-      const investments = document.getElementById("investments").value;
-      const investments1 = document.getElementById("investments1").value;
-      const investments2 = document.getElementById("investments2").value;
-      const investments3 = document.getElementById("investments3").value;
-      const investments4 = document.getElementById("investments4").value;
-      const investments5 = document.getElementById("investments5").value;
-      const investments6 = document.getElementById("investments6").value;
-      const investments7 = document.getElementById("investments7").value;
-      const investments8 = document.getElementById("investments8").value;
-      const investments65 = document.getElementById("investments65").value;
+          // Retrieving data from the form after submit event occurs
+          
+        const client_email = document.getElementById("client_email_id").value;
+        // const pic1 = document.getElementById("facility_pic_ent").files[0];
+        const facility_name = document.getElementById("facility_name").value;
+        // const pic2 = document.getElementById("facility_pic").files[0];
+        const dateInput = document.getElementById("dateInput").value;
+        const facility_location =
+        "http://www.google.com/maps/place/" +
+        document.getElementById("facility_location1").value +
+        "," +
+        document.getElementById("facility_location2").value;
+        const facility_address =
+        document.getElementById("facility_address").value;
+        const product_mfd = document.getElementById("product_mfd").value;
+        const prod_capacity = document.getElementById("prod_capacity").value;
+        const hr_shift = document.getElementById("hr_shift").value;
+        const wrk_frc = document.getElementById("wrk_frc").value;
+        const cert_obtained = document.getElementById("cert_obtained").value;
+        const cert_planned = document.getElementById("cert_planned").value;
+        const award_recieved = document.getElementById("award_recieved").value;
+        const baseline_data_period = document.getElementById(
+        "baseline_data_period"
+        ).value;
+        const total_elec_consumption = document.getElementById(
+        "total_elec_consumption"
+        ).value;
+        // Section - 2
+        const annual_elec_consumption = document.getElementById(
+        "annual_elec_consumption"
+        ).value;
+        const wind_elec_generation = document.getElementById(
+        "wind_elec_generation"
+        ).value;
+        const solar_elec_generation = document.getElementById(
+        "solar_elec_generation"
+        ).value;
+        const annual_energy_cost =
+        document.getElementById("annual_energy_cost").value;
+        const energy_cost = document.getElementById("energy_cost").value;
+        const genset_diesel_consumption = document.getElementById(
+        "genset_diesel_consumption"
+        ).value;
+        const boiler_diesel_consumption = document.getElementById(
+        "boiler_diesel_consumption"
+        ).value;
+        const annual_diesel_cost =
+        document.getElementById("annual_diesel_cost").value;
+        const petrol_consumption_logistics = document.getElementById(
+        "petrol_consumption_logistics"
+        ).value;
+        const petrol_cost_logistics = document.getElementById(
+        "petrol_cost_logistics"
+        ).value;
+        const boiler_fuel_quantity = document.getElementById(
+        "boiler_fuel_quantity"
+        ).value;
+        const boiler_fuel_cost =
+        document.getElementById("boiler_fuel_cost").value;
+        const annual_production_quantity = document.getElementById(
+        "annual_production_quantity"
+        ).value;
+        const qty_fresh_water = document.getElementById("qty_fresh_water").value;
+        const total_qty_water = document.getElementById("total_qty_water").value;
+        const cost_fresh_water =
+        document.getElementById("cost_fresh_water").value;
+        const cost_recovered_water = document.getElementById("cost_recovered_water").value;
+        const domestic_water_consumption = document.getElementById("domestic_water_consumption").value;
+        const garden_area = document.getElementById("garden_area").value;
+        const garden_use = document.getElementById("garden_use").value;
+        //Section - 3
+        const garden_and_domestic_water_use_ob = document.getElementById("garden_and_domestic_water_use_ob").value;
+        // const pic3 = document.getElementById("pic_ob_at_power_house").files[0];
+        const assess_ob_at_power_house = document.getElementById("assess_ob_at_power_house").value;
+        // const pic4 = document.getElementById("pic_ob_at_compressor").files[0];
+        const assess_ob_at_compressor = document.getElementById("assess_ob_at_compressor").value;
+        // const pic5 = document.getElementById("pic_ob_at_genset").files[0];
+        const assess_ob_at_genset = document.getElementById("assess_ob_at_genset").value;
+        // const pic6 = document.getElementById("pic_ob_at_boiler").files[0];
+        const assess_ob_at_boiler = document.getElementById("assess_ob_at_boiler").value;
+        // const pic7 = document.getElementById("pic_ob_at_thermopac").files[0];
+        const assess_ob_at_thermopac = document.getElementById("assess_ob_at_thermopac").value;
+        // const pic8 = document.getElementById("pic_ob_at_other").files[0];
+        const assess_ob_at_other = document.getElementById("assess_ob_at_other").value;
+        const compressed_air_saving = document.getElementById("compressed_air_saving").value;
+        const lighting_observation = document.getElementById("lighting_observation").value;
+        const lighting_saving = document.getElementById("lighting_saving").value;
+        const lighting_est_investment = document.getElementById("lighting_est_investment").value;
+        const lighting_est_savings = document.getElementById("lighting_est_savings").value;
+        // const pic9 = document.getElementById("lighting_systems_photo").files[0];
+        const electrical_motors_observations = document.getElementById("electrical_motors_observations").value;
+        // Section - 4
+        const total_elec_motors = document.getElementById("total_elec_motors").value;
+        const energy_saving_opportunities_in_electrical_motors =
+        document.getElementById("energy_saving_opportunities_in_electrical_motors").value;
+        const estimated_savings_motor_upgradation = document.getElementById("estimated_savings_motor_upgradation").value;
+        const waste_heat_recovery_observations = document.getElementById("waste_heat_recovery_observations").value;
+        const waste_heat_recovery_fuel_savings = document.getElementById("waste_heat_recovery_fuel_savings").value;
+        // const pic10 = document.getElementById("pic_ob_raw_material").files[0];
+        const assessment_observation_at_raw_material_inward =
+        document.getElementById("assessment_observation_at_raw_material_inward").value;
+        // const pic11 = document.getElementById("pic_ob_material_handling").files[0];
+        const assessment_observation_at_material_handling =
+        document.getElementById("assessment_observation_at_material_handling").value;
+        const production_machine_utilization_data_collection_aspects =
+        document.getElementById("production_machine_utilization_data_collection_aspects").value;
+        // const pic12 = document.getElementById("pic_production_machine_util").files[0];
+        const production_layout_observations = document.getElementById("production_layout_observations").value;
+        // const pic13 = document.getElementById("production_layout_ob_photo").files[0];
+        const installation_monitoring_systems = document.getElementById("installation_monitoring_systems").value;
+        const mgmt_on_energy_resource = document.getElementById("mgmt_on_energy_resource").value;
+        const opportunities_in_the_facility = document.getElementById("opportunities_in_the_facility").value;
+        const material_conservation_opportunities = document.getElementById("material_conservation_opportunities").value;
+        const water_reuse_opportunities = document.getElementById("water_reuse_opportunities").value;
+        const scope_for_renewable = document.getElementById("scope_for_renewable").value;
+        const details_of_renewable_energy = document.getElementById("details_of_renewable_energy").value;
+        // const pic14 = document.getElementById("pic_renewable_energy").files[0];
+        const annual_rainfall = document.getElementById("annual_rainfall").value;
+        const total_roof_area = document.getElementById("total_roof_area").value;
+        const rw_harvesting_observation = document.getElementById("rw_harvesting_observation").value;
+        const water_saving_opportunties = document.getElementById("water_saving_opportunties").value;
+        // Section - 5
+        const obs_on_safety = document.getElementById("obs_on_safety").value;
+        // const pic15 = document.getElementById("obs_on_safety_img").files[0];
+        const obs_on_safety_crit = document.getElementById("obs_on_safety_crit").value;
+        // const pic16 = document.getElementById("obs_on_safety_prod_photo").files[0];
+        const obs_on_safety_prod = document.getElementById("obs_on_safety_prod").value;
+        // const pic17 = document.getElementById("obs_on_safety_elec_photo").files[0];
+        const obs_on_safety_elec = document.getElementById("obs_on_safety_elec").value;
+        // const pic18 = document.getElementById("obs_on_safety_chem_photo").files[0];
+        const obs_on_safety_chem = document.getElementById("obs_on_safety_chem").value;
+        // const pic19 = document.getElementById("obs_on_safety_fire_photo").files[0];
+        const obs_on_safety_fire = document.getElementById("obs_on_safety_fire").value;
+        const obs_on_elec_earth = document.getElementById("obs_on_elec_earth").value;
+        // const pic20 = document.getElementById("obs_on_elec_earth_photo").files[0];
+        // const pic21 = document.getElementById("overall_obs_on_safety_photo").files[0];
+        const specific_energy = document.getElementById("specific_energy").value;
+        const specific_water = document.getElementById("specific_water").value;
+        const specific_fuel = document.getElementById("specific_fuel").value;
+        const specific_fuel_cost =
+        document.getElementById("specific_fuel_cost").value;
+        // const specific_water_cost = document.getElementById("specific_water_cost").value;
+        const specific_water_cost1 = document.getElementById("specific_water_cost1").value;
+        const energy_savings = document.getElementById("energy_savings").value;
+        const fuel_savings = document.getElementById("fuel_savings").value;
+        const water_savings = document.getElementById("water_savings").value;
+        const rwh = document.getElementById("rwh").value;
+        const material_savings = document.getElementById("material_savings").value;
+        const ct_opportunities = document.getElementById("ct_opportunities").value;
+        const savings1 = document.getElementById("savings1").value;
+        const savings2 = document.getElementById("savings2").value;
+        const savings3 = document.getElementById("savings3").value;
+        const savings4 = document.getElementById("savings4").value;
+        const savings5 = document.getElementById("savings5").value;
+        const investments = document.getElementById("investments").value;
+        const investments1 = document.getElementById("investments1").value;
+        const investments2 = document.getElementById("investments2").value;
+        const investments3 = document.getElementById("investments3").value;
+        const investments4 = document.getElementById("investments4").value;
+        const investments5 = document.getElementById("investments5").value;
+        const investments6 = document.getElementById("investments6").value;
+        const investments7 = document.getElementById("investments7").value;
+        const investments8 = document.getElementById("investments8").value;
+        const investments65 = document.getElementById("investments65").value;
 
-      // checking all checkbox inputs and storing only the values which have been selected
+        // checking all checkbox inputs and storing only the values which have been selected
 
-      var f_operationGroup = document.querySelectorAll(".f_operation");
-      var f_operationItems = [];
-      // Loop through each checkbox group
-      f_operationGroup.forEach(function (group, index) {
-      // Get all checkboxes within the group
-      var checkboxes = group.querySelectorAll('input[type="checkbox"]');
+        var f_operationGroup = document.querySelectorAll(".f_operation");
+        var f_operationItems = [];
+        // Loop through each checkbox group
+        f_operationGroup.forEach(function (group, index) {
+        // Get all checkboxes within the group
+        var checkboxes = group.querySelectorAll('input[type="checkbox"]');
 
-      // Loop through checkboxes to find checked ones within the group
-      checkboxes.forEach(function (checkbox) {
-      if (checkbox.checked) {
-      // Add checked value to the array
-      f_operationItems.push(checkbox.value);
-      console.log(f_operationItems);
-      }
-      });
-      });
+        // Loop through checkboxes to find checked ones within the group
+        checkboxes.forEach(function (checkbox) {
+        if (checkbox.checked) {
+        // Add checked value to the array
+        f_operationItems.push(checkbox.value);
+        console.log(f_operationItems);
+        }
+        });
+        });
 
-      var elec_energy_srcGroup = document.querySelectorAll(".elec_energy_src");
-      var elec_energy_srcItems = [];
-      // Loop through each checkbox group
-      elec_energy_srcGroup.forEach(function (group, index) {
-      // Get all checkboxes within the group
-      var checkboxes = group.querySelectorAll('input[type="checkbox"]');
+        var elec_energy_srcGroup = document.querySelectorAll(".elec_energy_src");
+        var elec_energy_srcItems = [];
+        // Loop through each checkbox group
+        elec_energy_srcGroup.forEach(function (group, index) {
+        // Get all checkboxes within the group
+        var checkboxes = group.querySelectorAll('input[type="checkbox"]');
 
-      // Loop through checkboxes to find checked ones within the group
-      checkboxes.forEach(function (checkbox) {
-      if (checkbox.checked) {
-      // Add checked value to the array
-      elec_energy_srcItems.push(checkbox.value);
-      console.log(elec_energy_srcItems);
-      }
-      });
-      });
+        // Loop through checkboxes to find checked ones within the group
+        checkboxes.forEach(function (checkbox) {
+        if (checkbox.checked) {
+        // Add checked value to the array
+        elec_energy_srcItems.push(checkbox.value);
+        console.log(elec_energy_srcItems);
+        }
+        });
+        });
 
-      var boiler_fuelGroup = document.querySelectorAll(".boiler_fuel");
-      var boiler_fuelItems = [];
-      // Loop through each checkbox group
-      boiler_fuelGroup.forEach(function (group, index) {
-      // Get all checkboxes within the group
-      var checkboxes = group.querySelectorAll('input[type="checkbox"]');
+        var boiler_fuelGroup = document.querySelectorAll(".boiler_fuel");
+        var boiler_fuelItems = [];
+        // Loop through each checkbox group
+        boiler_fuelGroup.forEach(function (group, index) {
+        // Get all checkboxes within the group
+        var checkboxes = group.querySelectorAll('input[type="checkbox"]');
 
-      // Loop through checkboxes to find checked ones within the group
-      checkboxes.forEach(function (checkbox) {
-      if (checkbox.checked) {
-      // Add checked value to the array
-      boiler_fuelItems.push(checkbox.value);
-      console.log(boiler_fuelItems);
-      }
-      });
-      });
+        // Loop through checkboxes to find checked ones within the group
+        checkboxes.forEach(function (checkbox) {
+        if (checkbox.checked) {
+        // Add checked value to the array
+        boiler_fuelItems.push(checkbox.value);
+        console.log(boiler_fuelItems);
+        }
+        });
+        });
 
-      var src_waterGroup = document.querySelectorAll(".src_water");
-      var src_waterItems = [];
-      // Loop through each checkbox group
-      src_waterGroup.forEach(function (group, index) {
-      // Get all checkboxes within the group
-      var checkboxes = group.querySelectorAll('input[type="checkbox"]');
+        var src_waterGroup = document.querySelectorAll(".src_water");
+        var src_waterItems = [];
+        // Loop through each checkbox group
+        src_waterGroup.forEach(function (group, index) {
+        // Get all checkboxes within the group
+        var checkboxes = group.querySelectorAll('input[type="checkbox"]');
 
-      // Loop through checkboxes to find checked ones within the group
-      checkboxes.forEach(function (checkbox) {
-      if (checkbox.checked) {
-      // Add checked value to the array
-      src_waterItems.push(checkbox.value);
-      console.log(src_waterItems);
-      }
-      });
-      });
+        // Loop through checkboxes to find checked ones within the group
+        checkboxes.forEach(function (checkbox) {
+        if (checkbox.checked) {
+        // Add checked value to the array
+        src_waterItems.push(checkbox.value);
+        console.log(src_waterItems);
+        }
+        });
+        });
 
-      var src_fuelGroup = document.querySelectorAll(".src_fuel");
-      var src_fuelItems = [];
-      // Loop through each checkbox group
-      src_fuelGroup.forEach(function (group, index) {
-      // Get all checkboxes within the group
-      var checkboxes = group.querySelectorAll('input[type="checkbox"]');
+        var src_fuelGroup = document.querySelectorAll(".src_fuel");
+        var src_fuelItems = [];
+        // Loop through each checkbox group
+        src_fuelGroup.forEach(function (group, index) {
+        // Get all checkboxes within the group
+        var checkboxes = group.querySelectorAll('input[type="checkbox"]');
 
-      // Loop through checkboxes to find checked ones within the group
-      checkboxes.forEach(function (checkbox) {
-      if (checkbox.checked) {
-      // Add checked value to the array
-      src_fuelItems.push(checkbox.value);
-      console.log(src_fuelItems);
-      }
-      });
-      });
+        // Loop through checkboxes to find checked ones within the group
+        checkboxes.forEach(function (checkbox) {
+        if (checkbox.checked) {
+        // Add checked value to the array
+        src_fuelItems.push(checkbox.value);
+        console.log(src_fuelItems);
+        }
+        });
+        });
 
-      var scope_comp_airGroup = document.querySelectorAll(".scope_comp_air");
-      var scope_comp_airItems = [];
-      // Loop through each checkbox group
-      scope_comp_airGroup.forEach(function (group, index) {
-      // Get all checkboxes within the group
-      var checkboxes = group.querySelectorAll('input[type="checkbox"]');
+        var scope_comp_airGroup = document.querySelectorAll(".scope_comp_air");
+        var scope_comp_airItems = [];
+        // Loop through each checkbox group
+        scope_comp_airGroup.forEach(function (group, index) {
+        // Get all checkboxes within the group
+        var checkboxes = group.querySelectorAll('input[type="checkbox"]');
 
-      // Loop through checkboxes to find checked ones within the group
-      checkboxes.forEach(function (checkbox) {
-      if (checkbox.checked) {
-      // Add checked value to the array
-      scope_comp_airItems.push(checkbox.value);
-      console.log(scope_comp_airItems);
-      }
-      });
-      });
+        // Loop through checkboxes to find checked ones within the group
+        checkboxes.forEach(function (checkbox) {
+        if (checkbox.checked) {
+        // Add checked value to the array
+        scope_comp_airItems.push(checkbox.value);
+        console.log(scope_comp_airItems);
+        }
+        });
+        });
 
-      var elec_motorsGroup = document.querySelectorAll(".elec_motors");
-      var elec_motorsItems = [];
-      // Loop through each checkbox group
-      elec_motorsGroup.forEach(function (group, index) {
-      // Get all checkboxes within the group
-      var checkboxes = group.querySelectorAll('input[type="checkbox"]');
+        var elec_motorsGroup = document.querySelectorAll(".elec_motors");
+        var elec_motorsItems = [];
+        // Loop through each checkbox group
+        elec_motorsGroup.forEach(function (group, index) {
+        // Get all checkboxes within the group
+        var checkboxes = group.querySelectorAll('input[type="checkbox"]');
 
-      // Loop through checkboxes to find checked ones within the group
-      checkboxes.forEach(function (checkbox) {
-      if (checkbox.checked) {
-      // Add checked value to the array
-      elec_motorsItems.push(checkbox.value);
-      console.log(elec_motorsItems);
-      }
-      });
-      });
+        // Loop through checkboxes to find checked ones within the group
+        checkboxes.forEach(function (checkbox) {
+        if (checkbox.checked) {
+        // Add checked value to the array
+        elec_motorsItems.push(checkbox.value);
+        console.log(elec_motorsItems);
+        }
+        });
+        });
 
-      var scope_wasteGroup = document.querySelectorAll(".scope_waste");
-      var scope_wasteItems = [];
-      // Loop through each checkbox group
-      scope_wasteGroup.forEach(function (group, index) {
-      // Get all checkboxes within the group
-      var checkboxes = group.querySelectorAll('input[type="checkbox"]');
+        var scope_wasteGroup = document.querySelectorAll(".scope_waste");
+        var scope_wasteItems = [];
+        // Loop through each checkbox group
+        scope_wasteGroup.forEach(function (group, index) {
+        // Get all checkboxes within the group
+        var checkboxes = group.querySelectorAll('input[type="checkbox"]');
 
-      // Loop through checkboxes to find checked ones within the group
-      checkboxes.forEach(function (checkbox) {
-      if (checkbox.checked) {
-      // Add checked value to the array
-      scope_wasteItems.push(checkbox.value);
-      console.log(scope_wasteItems);
-      }
-      });
+        // Loop through checkboxes to find checked ones within the group
+        checkboxes.forEach(function (checkbox) {
+        if (checkbox.checked) {
+        // Add checked value to the array
+        scope_wasteItems.push(checkbox.value);
+        console.log(scope_wasteItems);
+        }
+        });
 
-      if (
-      document.getElementById("textAreaContainer").style.display == "block"
-      ) {
-      scope_wasteItems.push(document.getElementById("whr").value);
-      }
-      });
+        if (
+        document.getElementById("textAreaContainer").style.display == "block"
+        ) {
+        scope_wasteItems.push(document.getElementById("whr").value);
+        }
+        });
 
-      var rwh_scopeGroup = document.querySelectorAll(".rwh_scope");
-      var rwh_scopeItems = [];
-      // Loop through each checkbox group
-      rwh_scopeGroup.forEach(function (group, index) {
-      // Get all checkboxes within the group
-      var checkboxes = group.querySelectorAll('input[type="checkbox"]');
+        var rwh_scopeGroup = document.querySelectorAll(".rwh_scope");
+        var rwh_scopeItems = [];
+        // Loop through each checkbox group
+        rwh_scopeGroup.forEach(function (group, index) {
+        // Get all checkboxes within the group
+        var checkboxes = group.querySelectorAll('input[type="checkbox"]');
 
-      // Loop through checkboxes to find checked ones within the group
-      checkboxes.forEach(function (checkbox) {
-      if (checkbox.checked) {
-      // Add checked value to the array
-      rwh_scopeItems.push(checkbox.value);
-      console.log(rwh_scopeItems);
-      }
-      });
-      });
+        // Loop through checkboxes to find checked ones within the group
+        checkboxes.forEach(function (checkbox) {
+        if (checkbox.checked) {
+        // Add checked value to the array
+        rwh_scopeItems.push(checkbox.value);
+        console.log(rwh_scopeItems);
+        }
+        });
+        });
 
-      // formatting date to DD-MM-YY
-      const day = String(new Date().getDate()).padStart(2, "0"); // Day with leading zero
-      const month = String(new Date().getMonth() + 1).padStart(2, "0"); // Month with leading zero (January is 0)
-      const year = String(new Date().getFullYear()).slice(-2); // Last two digits of the year
+        // formatting date to DD-MM-YY
+        const day = String(new Date().getDate()).padStart(2, "0"); // Day with leading zero
+        const month = String(new Date().getMonth() + 1).padStart(2, "0"); // Month with leading zero (January is 0)
+        const year = String(new Date().getFullYear()).slice(-2); // Last two digits of the year
 
-      // Format the date as "DD-MM-YY" (day-month-year)
-      const formattedDate = `${day}-${month}-${year}`;
+        // Format the date as "DD-MM-YY" (day-month-year)
+        const formattedDate = `${day}-${month}-${year}`;
 
-      const hours = String(new Date().getHours()).padStart(2, "0"); // Hours (00 to 23)
-      const minutes = String(new Date().getMinutes()).padStart(2, "0"); // Minutes (00 to 59)
-      const seconds = String(new Date().getSeconds()).padStart(2, "0"); // Seconds (00 to 59)
+        const hours = String(new Date().getHours()).padStart(2, "0"); // Hours (00 to 23)
+        const minutes = String(new Date().getMinutes()).padStart(2, "0"); // Minutes (00 to 59)
+        const seconds = String(new Date().getSeconds()).padStart(2, "0"); // Seconds (00 to 59)
 
-      // Format the time as "HH:MM:SS" (hours:minutes:seconds)
-      const formattedTime = `${hours}:${minutes}:${seconds}`;
-
-      let formData = {
-      form2Id: new Date().getTime(),
-      date: formattedDate,
-      time: formattedTime,
-      questions: {
-      //facility_pic_ent: facility_pic_ent,
-      facility_name: facility_name,
-      //facility_pic: facility_pic,
-      facility_location: facility_location,
-      facility_address: facility_address,
-      dateInput: dateInput,
-      f_operation: f_operationItems, //checkbox
-      facility_category: facility_category, //radio
-      product_mfd: product_mfd,
-      prod_capacity: prod_capacity,
-      number_of_shifts: number_of_shifts, //radio
-      hr_shift: hr_shift,
-      wrk_frc: wrk_frc,
-      cert_obtained: cert_obtained,
-      cert_planned: cert_planned,
-      award_recieved: award_recieved,
-      elec_energy_src: elec_energy_srcItems, //checkbox
-      baseline_data_period: baseline_data_period,
-      total_elec_consumption: total_elec_consumption,
-      //Section - 2
-      annual_elec_consumption: annual_elec_consumption,
-      wind_elec_generation: wind_elec_generation,
-      solar_elec_generation: solar_elec_generation,
-      annual_energy_cost: annual_energy_cost,
-      energy_cost: energy_cost,
-      genset_diesel_consumption: genset_diesel_consumption,
-      boiler_diesel_consumption: boiler_diesel_consumption,
-      annual_diesel_cost: annual_diesel_cost,
-      petrol_consumption_logistics: petrol_consumption_logistics,
-      petrol_cost_logistics: petrol_cost_logistics,
-      boiler_fuel: boiler_fuelItems, //checkbox
-      boiler_fuel_quantity: boiler_fuel_quantity,
-      boiler_fuel_cost: boiler_fuel_cost,
-      annual_production_quantity: annual_production_quantity,
-      src_water: src_waterItems, //checkbox
-      qty_fresh_water: qty_fresh_water,
-      total_qty_water: total_qty_water,
-      cost_fresh_water: cost_fresh_water,
-      cost_recovered_water: cost_recovered_water,
-      zld: zld, //radio
-      effluent_treatment: effluent_treatment, //radio
-      water_quality: water_quality, //radio
-      domestic_water_consumption: domestic_water_consumption,
-      garden_area: garden_area,
-      garden_use: garden_use,
-      //Section - 3
-      garden_and_domestic_water_use_ob: garden_and_domestic_water_use_ob,
-      src_fuel: src_fuelItems, //checkbox
-      //pic_ob_at_power_house: pic_ob_at_power_house, //file
-      assess_ob_at_power_house: assess_ob_at_power_house,
-      //pic_ob_at_compressor: pic_ob_at_compressor, //file
-      assess_ob_at_compressor: assess_ob_at_compressor,
-      //pic_ob_at_genset: pic_ob_at_genset, //file
-      assess_ob_at_genset: assess_ob_at_genset,
-      //pic_ob_at_boiler: pic_ob_at_boiler, //file
-      assess_ob_at_boiler: assess_ob_at_boiler,
-      //pic_ob_at_thermopac: pic_ob_at_thermopac, //file
-      assess_ob_at_thermopac: assess_ob_at_thermopac,
-      //pic_ob_at_other: pic_ob_at_other, //file
-      assess_ob_at_other: assess_ob_at_other,
-      scope_comp_air: scope_comp_airItems, //checkbox
-      compressed_air_saving: compressed_air_saving,
-      lighting_observation: lighting_observation,
-      lighting_saving: lighting_saving,
-      lighting_est_investment: lighting_est_investment,
-      lighting_est_savings: lighting_est_savings,
-      //lighting_systems_photo: lighting_systems_photo, //file
-      electrical_motors_observations: electrical_motors_observations,
-      //Section - 4
-      total_elec_motors: total_elec_motors,
-      elec_motors: elec_motorsItems, //checkbox
-      energy_saving_opportunities_in_electrical_motors:
-      energy_saving_opportunities_in_electrical_motors,
-      estimated_savings_motor_upgradation:
-      estimated_savings_motor_upgradation,
-      waste_heat_recovery_observations: waste_heat_recovery_observations,
-      scope_waste: scope_wasteItems, //checkbox
-      waste_heat_recovery_fuel_savings: waste_heat_recovery_fuel_savings,
-      //pic_ob_raw_material: pic_ob_raw_material, //file
-      assessment_observation_at_raw_material_inward:
-      assessment_observation_at_raw_material_inward,
-      //pic_ob_material_handling: pic_ob_material_handling, //file
-      assessment_observation_at_material_handling:
-      assessment_observation_at_material_handling,
-      production_machine_utilization_data_collection_aspects:
-      production_machine_utilization_data_collection_aspects,
-      //pic_production_machine_util: pic_production_machine_util, //file
-      production_layout_observations: production_layout_observations,
-      //production_layout_ob_photo: production_layout_ob_photo, //file
-      installation_monitoring_systems: installation_monitoring_systems,
-      mgmt_on_energy_resource: mgmt_on_energy_resource,
-      opportunities_in_the_facility: opportunities_in_the_facility,
-      material_conservation_opportunities:
-      material_conservation_opportunities,
-      water_reuse_opportunities: water_reuse_opportunities,
-      scope_for_renewable: scope_for_renewable,
-      details_of_renewable_energy: details_of_renewable_energy,
-      //pic_renewable_energy: pic_renewable_energy, //file
-      annual_rainfall: annual_rainfall,
-      total_roof_area: total_roof_area,
-      rwh_scope: rwh_scopeItems, //checkbox
-      rw_harvesting_observation: rw_harvesting_observation,
-      water_saving_opportunties: water_saving_opportunties,
-      //Section - 5
-      obs_on_safety: obs_on_safety,
-      //obs_on_safety_img: obs_on_safety_img, //file
-      obs_on_safety_crit: obs_on_safety_crit,
-      //obs_on_safety_prod_photo: obs_on_safety_prod_photo, //file
-      obs_on_safety_prod: obs_on_safety_prod,
-      //obs_on_safety_elec_photo: obs_on_safety_elec_photo, //file
-      obs_on_safety_elec: obs_on_safety_elec,
-      //obs_on_safety_chem_photo: obs_on_safety_chem_photo, //file
-      obs_on_safety_chem: obs_on_safety_chem,
-      //obs_on_safety_fire_photo: obs_on_safety_fire_photo, //file
-      obs_on_safety_fire: obs_on_safety_fire,
-      obs_on_elec_earth: obs_on_elec_earth,
-      //obs_on_elec_earth_photo: obs_on_elec_earth_photo, //file
-      //overall_obs_on_safety_photo: overall_obs_on_safety_photo, //file
-      specific_energy: specific_energy,
-      specific_water: specific_water,
-      specific_fuel: specific_fuel,
-      specific_fuel_cost: specific_fuel_cost,
-      // specific_water_cost: specific_water_cost,
-      specific_water_cost1: specific_water_cost1,
-      energy_savings: energy_savings,
-      fuel_savings: fuel_savings,
-      water_savings: water_savings,
-      rwh: rwh,
-      material_savings: material_savings,
-      ct_opportunities: ct_opportunities,
-      savings1: savings1,
-      savings2: savings2,
-      savings3: savings3,
-      savings4: savings4,
-      savings5: savings5,
-      investments: investments,
-      investments1: investments1,
-      investments2: investments2,
-      investments3: investments3,
-      investments4: investments4,
-      investments5: investments5,
-      investments6: investments6,
-      investments7: investments7,
-      investments8: investments8,
-      investments65: investments65,
-      },
-      };
+        // Format the time as "HH:MM:SS" (hours:minutes:seconds)
+        const formattedTime = `${hours}:${minutes}:${seconds}`;
+        const formId = new Date().getTime(); 
+        let formData = {
+          form_id: formId,
+          date: formattedDate,
+          time: formattedTime,
+          client_email :client_email,
+          questions: {
+          client_email:client_email,
+          //facility_pic_ent: facility_pic_ent,
+          facility_name: facility_name,
+          //facility_pic: facility_pic,
+          facility_location: facility_location,
+          facility_address: facility_address,
+          dateInput: dateInput,
+          f_operation: f_operationItems, //checkbox
+          facility_category: facilityCategoryValue, //radio
+          product_mfd: product_mfd,
+          prod_capacity: prod_capacity,
+          number_of_shifts: noOfShiftsValue, //radio
+          hr_shift: hr_shift,
+          wrk_frc: wrk_frc,
+          cert_obtained: cert_obtained,
+          cert_planned: cert_planned,
+          award_recieved: award_recieved,
+          elec_energy_src: elec_energy_srcItems, //checkbox
+          baseline_data_period: baseline_data_period,
+          total_elec_consumption: total_elec_consumption,
+          //Section - 2
+          annual_elec_consumption: annual_elec_consumption,
+          wind_elec_generation: wind_elec_generation,
+          solar_elec_generation: solar_elec_generation,
+          annual_energy_cost: annual_energy_cost,
+          energy_cost: energy_cost,
+          genset_diesel_consumption: genset_diesel_consumption,
+          boiler_diesel_consumption: boiler_diesel_consumption,
+          annual_diesel_cost: annual_diesel_cost,
+          petrol_consumption_logistics: petrol_consumption_logistics,
+          petrol_cost_logistics: petrol_cost_logistics,
+          boiler_fuel: boiler_fuelItems, //checkbox
+          boiler_fuel_quantity: boiler_fuel_quantity,
+          boiler_fuel_cost: boiler_fuel_cost,
+          annual_production_quantity: annual_production_quantity,
+          src_water: src_waterItems, //checkbox
+          qty_fresh_water: qty_fresh_water,
+          total_qty_water: total_qty_water,
+          cost_fresh_water: cost_fresh_water,
+          cost_recovered_water: cost_recovered_water,
+          zld: zldValue, //radio
+          effluent_treatment: effluentTreatmentValue, //radio
+          water_quality: water_qualityValue, //radio
+          domestic_water_consumption: domestic_water_consumption,
+          garden_area: garden_area,
+          garden_use: garden_use,
+          //Section - 3
+          garden_and_domestic_water_use_ob: garden_and_domestic_water_use_ob,
+          src_fuel: src_fuelItems, //checkbox
+          //pic_ob_at_power_house: pic_ob_at_power_house, //file
+          assess_ob_at_power_house: assess_ob_at_power_house,
+          //pic_ob_at_compressor: pic_ob_at_compressor, //file
+          assess_ob_at_compressor: assess_ob_at_compressor,
+          //pic_ob_at_genset: pic_ob_at_genset, //file
+          assess_ob_at_genset: assess_ob_at_genset,
+          //pic_ob_at_boiler: pic_ob_at_boiler, //file
+          assess_ob_at_boiler: assess_ob_at_boiler,
+          //pic_ob_at_thermopac: pic_ob_at_thermopac, //file
+          assess_ob_at_thermopac: assess_ob_at_thermopac,
+          //pic_ob_at_other: pic_ob_at_other, //file
+          assess_ob_at_other: assess_ob_at_other,
+          scope_comp_air: scope_comp_airItems, //checkbox
+          compressed_air_saving: compressed_air_saving,
+          lighting_observation: lighting_observation,
+          lighting_saving: lighting_saving,
+          lighting_est_investment: lighting_est_investment,
+          lighting_est_savings: lighting_est_savings,
+          //lighting_systems_photo: lighting_systems_photo, //file
+          electrical_motors_observations: electrical_motors_observations,
+          //Section - 4
+          total_elec_motors: total_elec_motors,
+          elec_motors: elec_motorsItems, //checkbox
+          energy_saving_opportunities_in_electrical_motors:
+          energy_saving_opportunities_in_electrical_motors,
+          estimated_savings_motor_upgradation:
+          estimated_savings_motor_upgradation,
+          waste_heat_recovery_observations: waste_heat_recovery_observations,
+          scope_waste: scope_wasteItems, //checkbox
+          waste_heat_recovery_fuel_savings: waste_heat_recovery_fuel_savings,
+          //pic_ob_raw_material: pic_ob_raw_material, //file
+          assessment_observation_at_raw_material_inward:
+          assessment_observation_at_raw_material_inward,
+          //pic_ob_material_handling: pic_ob_material_handling, //file
+          assessment_observation_at_material_handling:
+          assessment_observation_at_material_handling,
+          production_machine_utilization_data_collection_aspects:
+          production_machine_utilization_data_collection_aspects,
+          //pic_production_machine_util: pic_production_machine_util, //file
+          production_layout_observations: production_layout_observations,
+          //production_layout_ob_photo: production_layout_ob_photo, //file
+          installation_monitoring_systems: installation_monitoring_systems,
+          mgmt_on_energy_resource: mgmt_on_energy_resource,
+          opportunities_in_the_facility: opportunities_in_the_facility,
+          material_conservation_opportunities:
+          material_conservation_opportunities,
+          water_reuse_opportunities: water_reuse_opportunities,
+          scope_for_renewable: scope_for_renewable,
+          details_of_renewable_energy: details_of_renewable_energy,
+          //pic_renewable_energy: pic_renewable_energy, //file
+          annual_rainfall: annual_rainfall,
+          total_roof_area: total_roof_area,
+          rwh_scope: rwh_scopeItems, //checkbox
+          rw_harvesting_observation: rw_harvesting_observation,
+          water_saving_opportunties: water_saving_opportunties,
+          //Section - 5
+          obs_on_safety: obs_on_safety,
+          //obs_on_safety_img: obs_on_safety_img, //file
+          obs_on_safety_crit: obs_on_safety_crit,
+          //obs_on_safety_prod_photo: obs_on_safety_prod_photo, //file
+          obs_on_safety_prod: obs_on_safety_prod,
+          //obs_on_safety_elec_photo: obs_on_safety_elec_photo, //file
+          obs_on_safety_elec: obs_on_safety_elec,
+          //obs_on_safety_chem_photo: obs_on_safety_chem_photo, //file
+          obs_on_safety_chem: obs_on_safety_chem,
+          //obs_on_safety_fire_photo: obs_on_safety_fire_photo, //file
+          obs_on_safety_fire: obs_on_safety_fire,
+          obs_on_elec_earth: obs_on_elec_earth,
+          //obs_on_elec_earth_photo: obs_on_elec_earth_photo, //file
+          //overall_obs_on_safety_photo: overall_obs_on_safety_photo, //file
+          specific_energy: specific_energy,
+          specific_water: specific_water,
+          specific_fuel: specific_fuel,
+          specific_fuel_cost: specific_fuel_cost,
+          // specific_water_cost: specific_water_cost,
+          specific_water_cost1: specific_water_cost1,
+          energy_savings: energy_savings,
+          fuel_savings: fuel_savings,
+          water_savings: water_savings,
+          rwh: rwh,
+          material_savings: material_savings,
+          ct_opportunities: ct_opportunities,
+          savings1: savings1,
+          savings2: savings2,
+          savings3: savings3,
+          savings4: savings4,
+          savings5: savings5,
+          investments: investments,
+          investments1: investments1,
+          investments2: investments2,
+          investments3: investments3,
+          investments4: investments4,
+          investments5: investments5,
+          investments6: investments6,
+          investments7: investments7,
+          investments8: investments8,
+          investments65: investments65,
+          },
+        };
 
 
-      // Send mockData to server via POST request
+      // Send form data to server via POST request
       fetch("http://localhost:3000/submitFormData", {
       method: "POST",
       headers: {
@@ -3229,7 +3240,8 @@
       .then((response) => {
       if (response.ok) {
       console.log("Form data submitted successfully");
-      window.alert("Form data submitted successfully");
+      window.alert("Form data submitted successfully!\nDate: "+formattedDate+"\nTime: "+formattedTime+"\nForm ID: "+formId);
+
       } else {
       console.error("Failed to submit form data");
       }
@@ -3239,7 +3251,6 @@
       });
       }
 
-      // submitForm2();
     </script>
   </body>
 </html>
